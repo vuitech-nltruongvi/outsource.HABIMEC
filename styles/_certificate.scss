@@ -1,0 +1,108 @@
+.wrap__certificate {
+  // Slick
+  .slick-next {
+    right: -7px !important;
+
+    &::before {
+      font-family: "icon-out" !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      cursor: pointer;
+      content: "\eaef" !important;
+      font-size: 50px !important;
+      height: 1em;
+      width: 1em;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.234);
+      background-color: $color-text-grey;
+      opacity: 1;
+      font-size: 28px !important;
+      transition: all 200ms;
+    }
+  }
+
+  .slick-prev {
+    z-index: 100;
+    left: -10px !important;
+
+    &::before {
+      cursor: pointer;
+      font-family: "icon-out" !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      content: "\eaf0" !important;
+      height: 1em;
+      width: 1em;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.234);
+      background-color: $color-text-grey;
+      opacity: 1;
+      font-size: 28px !important;
+      transition: all 200ms;
+    }
+  }
+
+  .certificate__content {
+    background-image: url("../public/images/certificate/Asset\ 16@2x.png");
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+  }
+
+  .first-row-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    .img-top {
+      position: relative;
+      max-width: 100%;
+    }
+    .banner-top {
+      height: 60px;
+      max-width: 500px;
+      border-radius: 10px;
+      background-color: $color-blue;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      position: absolute;
+      bottom: 5rem;
+    }
+    .banner-content {
+      margin-left: 1rem;
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+    }
+  }
+
+  .second-row {
+    padding: 0 20%;
+    .slider-item-left {
+      max-width: 100%;
+      align-items: center;
+      flex-direction: column;
+      display: flex !important;
+      justify-content: center;
+      padding: 0 5rem;
+      .slider-item-left-image {
+        align-items: center;
+      }
+    }
+  }
+}
