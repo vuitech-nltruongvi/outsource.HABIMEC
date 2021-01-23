@@ -9,7 +9,7 @@ const Product = (props) => {
     const { lang } = props;
 
     return (
-        <div className='wrap_content'>
+        <div className='wrap__content'>
             <Header />
             <Footer />
         </div>
