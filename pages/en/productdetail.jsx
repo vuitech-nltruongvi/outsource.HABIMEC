@@ -1,11 +1,8 @@
-// Libraries
 import React from 'react';
 
-// Containers
-import Product from 'containers/Product'
+import Product from 'containers/Product';
 
 const ProductPage = () => {
-
     return (
         <div>
             <Product lang={'en'} />
