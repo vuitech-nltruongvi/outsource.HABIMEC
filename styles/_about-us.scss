@@ -1,0 +1,341 @@
+@import 'variables';
+
+.z-50 {
+    z-index: 50 !important;
+}
+.no-background {
+    background-image: none !important;
+}
+
+.about-us__container {
+    .wrap__introduce {
+        background-image: url(../public/images/about-us/aboutus-2.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: Segoe UI Semibold;
+        font-weight: 500;
+        font-size: 13px;
+
+        .introduce__content {
+            position: relative;
+            min-height: 600px;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 60%;
+
+            .logo-banner__box {
+                height: 60px;
+                max-width: 500px;
+                border-radius: 10px;
+                background-color: $color-blue;    
+                display: flex;
+                align-items: center;
+                padding: 0 2rem;
+
+                .brand__title {
+                    margin-left: 1rem;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: $color-yellow;
+                }
+            }
+
+            .content__description {
+                margin-top: 2rem;
+                color: $color-text-grey;
+
+                .d__label {
+                    padding-bottom: 0.7rem;
+                    position: relative;
+                    width: max-content;
+                    font-size: 14px;
+                    font-family: Myriad Pro Bold;
+
+                    &::after {
+                        position: relative;
+                        content: "";
+                        height: 2px;
+                        width: 90%;
+                        background-color: $color-text-grey;
+                        display: block;
+                        bottom: 3px;
+                    }
+                }
+
+            }
+
+            .introduce__box--more-info {
+                position: absolute;
+                bottom: -220px;
+                z-index: 51;
+
+                .border-wrap {
+                    box-shadow: 10px 10px 37px -16px rgba(0,0,0,0.75);
+                    padding: 1rem;
+                    width: 100%;
+                    border-radius: 10px;
+                    position: relative;
+                    background: linear-gradient(to right, #faf4ba, #c2a059);
+                    padding: 2px;     
+
+                    .info__image {
+                        position: absolute;
+                        width: 100px;
+                        top: -50px;
+                        left: calc(50% - 50px) ;
+                    }
+
+                    .box__content {
+                        text-align:justify;
+                        position: relative;
+                        padding: 5rem 1rem 1rem 1rem;
+                        border-radius: 10px;
+                        background: #fff;
+                        color: $color-text-grey;
+                        min-height: 420px;
+                    }                
+                }
+            }
+        }
+
+    }
+
+    .wrap__images-slick {
+        background-image: url(../public/images/about-us/aboutus-3.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: Segoe UI Semibold;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .parallax {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .images__content {
+        padding-top: 17rem;
+        min-height: 800px;
+        max-width: 60%;
+
+        .image__item {
+            background-color: #fff;
+            border-radius: 5%;
+            border: 5px solid #fff;
+            // min-height: 400px;
+        }
+
+        .image_thumbnail {
+            background-color: #fff;
+            border-radius: 5%;
+            border: 5px solid #fff;
+            width: 120px;
+        }
+
+        .right-info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 30vw;
+            padding-top: 5rem;
+
+            .right-info__image {
+                width: 100px;
+            }
+            p {color: #fff}
+
+            .certificate__button {
+                cursor: pointer;
+                position: relative;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-radius: 20px;
+                padding: 5px 20px;
+                font-size: 16px;
+                background-color: #fff;
+                display: flex;
+                z-index: 1;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-radius: 10rem;
+                transition: all 200ms;
+    
+                i {
+                  margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .wrap__slugion {
+        background-image: url(../public/images/about-us/aboutus-4.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        padding: 5rem;
+        font-weight: 500;
+    }
+
+    
+    .slick-thumb {
+        display: flex !important;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        bottom: -100px !important;
+    }
+
+    .slick-dots {
+        li {
+            width: max-content;
+            height: max-content;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // Slick
+.slick-next {
+    right: -7px !important;
+  
+    &::before {
+      font-family: 'icon-out' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      cursor: pointer;
+        content: "\eaef" !important;
+        font-size: 50px !important;
+        height: 1em;
+      width: 1em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.234);
+      background-color: $color-text-grey;
+      opacity: 1;
+        font-size: 28px !important;
+        transition: all 200ms;
+    }
+  }
+
+  .slick-prev {
+    z-index: 100;
+    left: -10px !important;
+
+    &::before {
+        cursor: pointer;
+      font-family: 'icon-out' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      content: "\eaf0" !important;
+      height: 1em;
+      width: 1em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.234);
+      background-color: $color-text-grey;
+      opacity: 1;
+        font-size: 28px !important;
+        transition: all 200ms;
+    }
+  }
+}
+
+.slugion__content {
+    margin-left: 10rem;
+}
+
+
+@media only screen and (min-width: 1600px) {
+    .wrap__introduce {
+        font-size: 14px !important;
+    }
+    .introduce__content  {
+        min-height: 700px !important;
+        .box__content {
+            min-height: 500px !important;
+        }
+    }
+    .right-info {
+        font-size: 15px !important;
+    }
+    .images__content {min-height: 900px !important;}
+   
+  
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .introduce__content  {
+        max-width: 80% !important;
+
+        .brand__title{font-size: 14px !important;}
+       
+        .introduce__box--more-info {
+            position: relative !important;
+            top: 0 !important;
+        }
+
+        .introduce__box--more-info {
+            position: relative !important;
+            margin-top: 30px !important;
+        }
+    }
+
+    .images__content {
+        max-width: 80% !important;
+        padding-top: 2rem !important;
+
+        .right-info {
+            margin-top: 5rem !important;
+            min-height: 80vw !important;
+        }
+
+        .image_thumbnail {
+            width: 70px !important; 
+        }
+
+        .slick-thumb {
+            bottom: -70px !important;
+        } 
+    }
+
+
+
+    .wrap__slugion {
+        padding: 0 !important;
+        background-position: 0% 0% !important;
+    }
+
+    .slugion__content {
+        margin-left: 0 !important;
+    }
+   
+}
+  
+  

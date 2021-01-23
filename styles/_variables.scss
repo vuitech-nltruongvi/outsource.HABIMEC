@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Segoe UI Semibold;
+    src: url(../public/fonts/seguisb.ttf);
+    font-variant:normal;
+    font-weight:600;
+    font-stretch:normal;
+    font-size:9px;
+}
+
+@font-face {
+    position: relative;
+    font-family: Myriad Pro Bold;
+    src: url(../public/fonts/MYRIADPRO-BLACK_0.OTF);
+    font-variant:normal;
+    font-weight:600;
+    font-stretch:normal;
+    font-size:14px;
+
+}
+
+$color-blue: #132f52ff;
+$color-yellow: #e2cb9cff;
+$color-text-grey: #414142ff;
+

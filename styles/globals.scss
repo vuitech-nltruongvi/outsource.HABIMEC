@@ -1,20 +1,7 @@
-@font-face {
-    font-family: Segoe UI Semibold;
-    src: url(../public/fonts/seguisb.ttf);
-    font-variant:normal;
-    font-weight:600;
-    font-stretch:normal;
-    font-size:9px;
-}
+@import 'about-us';
+@import 'variables';
 
-@font-face {
-    font-family: Myriad Pro Bold;
-    src: url(../public/fonts/MYRIADPRO-BLACK_0.OTF);
-    font-variant:normal;
-    font-weight:600;
-    font-stretch:normal;
-    font-size:14px;
-}
+
  
 .example-container div {
   background: white;
@@ -159,6 +146,11 @@ a {
                     color: #808184;    
                     font-size: 16px;
                     transition: all 0.2s;
+
+                    &.active {
+                      color: #142f53;
+                    }
+                    
                     &:hover {
                       color: #142f53;
                     }
@@ -338,7 +330,7 @@ a {
         display: flex;
         gap: 100px;
         align-items: center;
-        background-image: url(../public//g338.png);
+        background-image: url(../public/images/trangchu-25.png);
         background-position: center;
         background-size: cover;
         height: auto;
@@ -411,6 +403,7 @@ a {
 
     .about-us {
         position: relative;
+        overflow: hidden;
         // background-image: url(../public/images/trangchu-20.png);
         background-position: center;
         background-size: cover;
@@ -435,9 +428,8 @@ a {
         }
 
         .message__box {
-            justify-content: flex-end;
+            justify-content: center;
             width: 400px;
-            padding-bottom: 160px;
             .message__title {
                 color: #59595bff;
                 margin-top: 10px;
@@ -639,7 +631,7 @@ a {
 
   .about-us {
     height: 650px !important;
-    .message__box { padding-bottom: 220px !important;}
+    .message__box {justify-content: flex-start !important; padding-top: 80px !important;}
     .img-logo {width: 180px !important; }
     .img-bottom {width: 80% !important; right: 0 !important;}
   }
