@@ -2,8 +2,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 
 // Components
-import Footer from 'containers/Footer';
-import Header from 'containers/Header';
+import Footer from 'containers/ProductDetail/node_modules/containers/Footer';
+import Header from 'containers/ProductDetail/node_modules/containers/Header';
 import { Col, Row } from 'antd';
 import Slider from 'react-slick'
 

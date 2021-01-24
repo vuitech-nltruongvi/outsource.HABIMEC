@@ -4,9 +4,9 @@ import React from 'react';
 //Components
 import Footer from 'containers/Footer';
 import Header from 'containers/Header';
-import { Row } from 'antd';
 
-const Product = (props) => {
+
+const ProductDetail = (props) => {
 
     const { lang } = props;
 
@@ -39,4 +39,4 @@ const Product = (props) => {
     );
 };
 
-export default Product;
+export default ProductDetail;
