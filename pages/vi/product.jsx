@@ -1,3 +1,4 @@
+
 //Libraries
 import React from 'react';
 
@@ -5,6 +6,7 @@ import React from 'react';
 import Product from 'containers/Product';
 
 const ProductPage = () => {
+
     return (
         <div>
             <Product lang={'vi'} />
