@@ -23,27 +23,59 @@ const Product = (props) => {
             navPic: refSliderPic.current,
             navNum: refSliderNum.current
         });
-    });
+    }, []);
 
     return (
         <div className='wrap__content'>
-            <Header />
+            <Header lang={lang} />
             <div className='wrap__product'>
                 <div className="product-content">
-
                     <div className="product-banner">
-                        <Row>
-                            <Col xs={{ span: 18 }} md={{ span: 15 }}><div className="banner-content"><div className='banner-content-title'> Sản phẩm của chúng tôi</div>
-                                <div className='banner-content-info'>Cùng bảo vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh Covid-19, chúng tôi xin giới thiệu các sản phẩm chủ yếu bao gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.</div>
-                            </div>
+                        <div className="banner-content">
+                            <div className='banner-content-title'> Sản phẩm của chúng tôi</div>
+                            <div className='banner-content-info'>Cùng bảo vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh Covid-19, chúng tôi xin giới thiệu các sản phẩm chủ yếu bao gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.</div>
+                        </div>
+                        <img src="/images/Product1@2x.png" className="banner-image" />
+                    </div>
+                    <div className='product-slider__content'>
+                        <Row className={'slider'} gutter={[20, 20]}>
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ position: 'relative' }}>
+                                <img src="/images/product/product-1.png" width={'100%'} alt="" />
+                                <section className="message__box display-content">
+                                    <div className="message__title">
+                                        GĂNG TAY Y TẾ NITRILE
+						</div>
+                                    <div className="message__description">
+                                        Được làm từ cao su nhân tạo Nitrile. Găng tay Nitrile là
+                                        sản phẩm tuyệt vời dành cho những người bị dị ứng
+                                        với cao su tự nhiên....
+						</div>
+                                    <div className="message__button-more">
+                                        More
+							<i className="icon-out-angle-right"></i>
+                                    </div>
+                                </section>
                             </Col>
-                            <Col xs={{ span: 6 }} md={{ span: 9 }}>
-                                <img src="/images/Product1@2x.png" className="banner-image" />
+                            <Col xs={{ span: 24 }} md={{ span: 12 }}>
+                                <img src="/images/product/product-2.png" width={'100%'} alt="" />
+                                <section className="message__box display-content">
+                                    <div className="message__title">
+                                        GĂNG TAY Y TẾ LATEX GLOVES
+						</div>
+                                    <div className="message__description" style={{ marginBottom: 20 }}>
+                                        Găng tay latex là loại găng tay được chiết xuất 100% từ
+                                        cao su tự nhiên....
+						</div>
+                                    <div className="message__button-more">
+                                        More
+							<i className="icon-out-angle-right"></i>
+                                    </div>
+                                </section>
                             </Col>
                         </Row>
                     </div>
-
-
+                    {/* 
+                    
                     <div className="product-slider">
                         <Slider
                             asNavFor={state.navNum}
@@ -95,7 +127,7 @@ const Product = (props) => {
                                 <h3>6</h3>
                             </div>
                         </Slider>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

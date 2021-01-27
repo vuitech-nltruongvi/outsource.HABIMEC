@@ -55,19 +55,57 @@
     }
   }
 
+  .product-slider__content {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slider {
+      width: 72%;
+    }
+
+    .display-content {
+      position: absolute;
+      margin-left: 0px;
+      bottom: 0px !important;
+      padding-bottom: 20px !important;
+      padding: 0px 70px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 13px;
+
+      .message__title {
+        font-size: 16px;
+      }
+      .message__description {
+        font-size: 13px;
+      text-align: center !important;
+      }
+    }
+  }
+
   .product-content {
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    background-image: url('../public/images/background-product.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     max-width: 100%;
-    padding: 100px 100px 100px;
 
     .product-banner {
+      position: relative;
       border-radius: 10px;
       background-color: #142f53;
-      width: 600px;
+      width: 70%;
       height: 250px;
       .banner-content {
-        width: 350px;
+        width: 70%;
         padding: 20px 20px;
         .banner-content-title {
           color: #e3cb9c;
@@ -90,9 +128,69 @@
         }
       }
       .banner-image {
-        position: relative;
-        bottom: 63px;
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
       }
     }
+
+    
+  .left__content {
+    position: relative;
+    background-image: url(../public/images/trangchu-21.png);
+    min-height: 600px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+
+    .message__box {
+      margin: 0px;
+      padding: 0px 100px;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      height: 50%;
+      background: rgb(62, 62, 62);
+      background: linear-gradient(
+        0deg,
+        rgba(62, 62, 62, 1) 0%,
+        rgba(62, 62, 62, 0.8) 25%,
+        rgba(214, 214, 214, 0) 100%
+      );
+
+      .message__description {
+        text-align: center;
+      }
+    }
+  }
+
+  .right__content {
+    position: relative;
+    background-image: url(../public/images/trangchu-22.png);
+    min-height: 600px;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+
+    .message__box {
+      margin: 0px;
+      padding: 0px 100px;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      height: 50%;
+      background: rgb(214, 214, 214);
+      background: linear-gradient(
+        0deg,
+        rgba(214, 214, 214, 0) 0%,
+        rgba(62, 62, 62, 0.7) 65%,
+        rgba(62, 62, 62, 1) 100%
+      );
+
+      .message__description {
+        text-align: center;
+      }
+    }
+  }
   }
 }

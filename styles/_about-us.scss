@@ -182,7 +182,8 @@
     }
 
     .wrap__slugion {
-        background-image: url(../public/images/about-us/aboutus-4.png);
+        position: relative;
+        background-image: url('../public/images/original/background-2.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -190,6 +191,13 @@
         display: flex;
         padding: 5rem;
         font-weight: 500;
+
+        .right-content-image {
+            position: absolute;
+            width: 50%;
+            bottom: 0px;
+            right: 0px;
+        }
     }
 
     
@@ -268,7 +276,8 @@
 }
 
 .slugion__content {
-    margin-left: 10rem;
+    margin-left: 14rem !important;
+    width: 90% !important;
 }
 
 
@@ -330,6 +339,7 @@
     .wrap__slugion {
         padding: 0 !important;
         background-position: 0% 0% !important;
+
     }
 
     .slugion__content {

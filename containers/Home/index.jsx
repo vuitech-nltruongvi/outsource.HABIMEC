@@ -8,20 +8,7 @@ import Slider from 'react-slick';
 import Header from 'containers/Header';
 import Footer from 'containers/Footer';
 
-const translations = {
-    vi: {
-        home: 'Trang chủ',
-        aboutUs: 'Về chúng tôi',
-        product: 'Sản phẩm',
-        contact: 'Liên hệ'
-    },
-    en: {
-        home: 'Home',
-        aboutUs: 'About us',
-        product: 'Product',
-        contact: 'Contact'
-    }
-}
+import { translations } from 'constant'
 
 export default function Home(props) {
     // Props
@@ -38,73 +25,66 @@ export default function Home(props) {
         cssEase: "linear",
         pauseOnHover: false,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        customPaging: function (i) {
+            return (
+                <a>
+                    <div className="slick__dot"></div>
+                </a>
+            );
+        },
     };
-
-    // Current Language
-    const currentLang = useMemo(() => {
-        return translations[lang]
-    }, [lang])
-
-    const onClickLang = (lang) => {
-        router.push(`/${lang}`)
-    }
-
 
     return (
         <div className="d-flex j-c">
             <div className='wrap__content'>
                 <Head>
-                    <title>HABIMEC GROUP JSC</title>
+                    <title>{translations[lang].HABIMECT_NAME}</title>
                     <link rel="icon" href="/logo.svg" />
                 </Head>
                 <Header lang={props.lang} />
                 <Slider {...settings} className='carousel__bar'>
                     <div>
-                        <img src="/images/banner/banner-02.JPG" className='responsive__image' alt="" />
+                        <img src="/images/original/banner/desktop/banner-1.png" className='responsive__image image-desktop' alt="" />
+                        <img src="/images/original/banner/mobile/banner-1.jpg" className='responsive__image image-mobile' alt="" />
                     </div>
                     <div>
-                        <img src="/images/banner/banner-01.png" className='responsive__image' alt="" />
+                        <img src="/images/original/banner/desktop/banner-2.png" className='responsive__image image-desktop' alt="" />
+                        <img src="/images/original/banner/mobile/banner-2.jpg" className='responsive__image image-mobile' alt="" />
                     </div>
                     <div>
-                        <img src="/images/trangchu-14.png" className='responsive__image' alt="" />
+                        <img src="/images/original/banner/desktop/banner-3.png" className='responsive__image image-desktop' alt="" />
+                        <img src="/images/original/banner/mobile/banner-3.jpg" className='responsive__image image-mobile' alt="" />
                     </div>
-                    {/* <div>
-                        <img src="/images/trangchu-14.png" className='responsive__image' alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/trangchu-14.png" className='responsive__image' alt="" />
-                    </div> */}
-                    {/* <div>
-                        <div className="brand__image" style={{ backgroundImage: `url(/images/banner-11.png)` }}></div>
-                    </div>
-                    <div>
-                        <div className="brand__image" style={{ backgroundImage: `url(/images/banner-11.png)` }}></div>
-                    </div>
-                    <div>
-                        <div className="brand__image" style={{ backgroundImage: `url(/images/banner-11.png)` }}></div>
-                    </div> */}
                 </Slider>
                 <div className="home__message" >
-                    <section className="message__box" data-aos="fade-left">
-                        <div className="message__title" >
-                            THÔNG ĐIỆP
+                    <Row>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+                            <section className="message__box home-box-2" data-aos="fade-left">
+                                <div className="message__title" >
+                                    THÔNG ĐIỆP
 						</div>
-                        <div className="message__description" >
-                            Là Tập đoàn sản xuất hàng đầu trong lĩnh vực thiết bị y tế với
-                            nhiều kinh nghiệm trong sản xuất, thương mại xuất khẩu sang
-                            châu Âu và Mỹ. Sự bùng phát của Coronavirus mới đã gây ra một
-                            cuộc khủng hoảng sức khỏe toàn cầu nghiêm trọng. Cùng bảo
-                            vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh
-                            Covid-19. Chúng tôi xin giới thiệu các sản phẩm chủ yếu bao
-                            gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị
-                            bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.....
+                                <div className="message__description" >
+                                    Là Tập đoàn sản xuất hàng đầu trong lĩnh vực thiết bị y tế với
+                                    nhiều kinh nghiệm trong sản xuất, thương mại xuất khẩu sang
+                                    châu Âu và Mỹ. Sự bùng phát của Coronavirus mới đã gây ra một
+                                    cuộc khủng hoảng sức khỏe toàn cầu nghiêm trọng. Cùng bảo
+                                    vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh
+                                    Covid-19. Chúng tôi xin giới thiệu các sản phẩm chủ yếu bao
+                                    gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị
+                                    bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.....
 						</div>
-                        <div className="message__button-more" >
-                            More
-							<i className="icon-out-angle-right"></i>
-                        </div>
-                    </section>
+                                <div className="message__button-more" >
+                                    {translations[lang].More}
+                                    <i className="icon-out-angle-right"></i>
+                                </div>
+                            </section>
+                        </Col>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }} className='wrap-image-hand'>
+                            <img className='image__hand' src="/images/original/home/hand-image-2.png" alt="" />
+                        </Col>
+                    </Row>
+
                 </div>
                 <Row>
                     <Col xs={{ span: 24 }} md={{ span: 12 }}>
@@ -123,9 +103,8 @@ export default function Home(props) {
                                     với cao su tự nhiên....
 						</div>
                                 <div className="message__button-more">
-                                    More
-							<i className="icon-out-angle-right"></i>
-                                </div>
+                                    {translations[lang].More}
+                                    <i className="icon-out-angle-right"></i></div>
                             </section>
                         </section>
                     </Col>
@@ -144,78 +123,87 @@ export default function Home(props) {
                                     cao su tự nhiên....
 						</div>
                                 <div className="message__button-more">
-                                    More
-							<i className="icon-out-angle-right"></i>
-                                </div>
+                                    {translations[lang].More}
+                                    <i className="icon-out-angle-right"></i></div>
                             </section>
                         </section>
                     </Col>
                 </Row>
                 <div className='more-info'>
-                    <div className="img-info" data-aos="flip-right">
-                        <img src="/images/trangchu-11.png" alt="" className='responsive__image w-50vw' />
-                    </div>
-                    <div className="more-info__right-content" data-aos="zoom-in-up">
-                        <span className='right-content__title'>
-                            NHÀ MÁY SẢN XUẤT GĂNG TAY Y TẾ
-						</span>
-                        <div className='mt-10'>
-                            <strong className="f-myriad fs-14">Địa điểm: </strong>
-                            <span className='f-segoe fs-14'>KCN Lai Uyên, Lai Uyên, Bàu Bàng, Bình Dương</span>
-                            <ul className='content__list'>
-                                <li className='content__item'>
-                                    Tổng mức đầu tư dự kiến:
+                    <Row style={{ width: '100%' }}>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }} className='wrap-more-info__image'>
+                            <img src="/images/original/home/left-image-3.png" alt="" className='more-info__image' />
+                        </Col>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }} className='wrap-more-info__content'>
+                            <div className="more-info__right-content" data-aos="zoom-in-up">
+                                <span className='right-content__title'>
+                                    NHÀ MÁY SẢN XUẤT GĂNG TAY Y TẾ
+						        </span>
+                                <div className='mt-10'>
+                                    <strong className="f-myriad fs-14">Địa điểm: </strong>
+                                    <span className='f-segoe fs-14'>KCN Lai Uyên, Lai Uyên, Bàu Bàng, Bình Dương</span>
+                                    <ul className='content__list'>
+                                        <li className='content__item'>
+                                            Tổng mức đầu tư dự kiến:
 									<div>
-                                        <span className="item--bold">890,000,000</span> &nbsp;
+                                                <span className="item--bold">890,000,000</span> &nbsp;
 										<span className='fs-14'>USD</span>
-                                    </div>
-                                </li>
-                                <li className='content__item'>
-                                    Tổng diện tích nhà máy:
+                                            </div>
+                                        </li>
+                                        <li className='content__item'>
+                                            Tổng diện tích nhà máy:
 								<div>
-                                        <span className="item--bold">220,000m<sup>2</sup></span> &nbsp;
+                                                <span className="item--bold">220,000m<sup>2</sup></span> &nbsp;
 										<span className='item--bold grey'>= 22ha</span> &nbsp;
 										<span className='fs-14'>(chiều cao 16m– 19m)</span>
-                                    </div>
-                                </li>
-                                <li className='content__item'>
-                                    Số lượng dây chuyền sản xuất:
+                                            </div>
+                                        </li>
+                                        <li className='content__item'>
+                                            Số lượng dây chuyền sản xuất:
 									<div>
-                                        <span className='item--bold'>195</span> &nbsp;
+                                                <span className='item--bold'>195</span> &nbsp;
 										<span className='fs-14'>dây chuyền</span>
-                                    </div>
-                                </li>
-                                <li className='content__item'>
-                                    Công suất (24/24h):
+                                            </div>
+                                        </li>
+                                        <li className='content__item'>
+                                            Công suất (24/24h):
 									<div>
-                                        <span className='item--bold'>1,100,000 – 1,300,000</span> &nbsp;
+                                                <span className='item--bold'>1,100,000 – 1,300,000</span> &nbsp;
 										<span className='fs-14'>chiếc/ dây chuyền</span>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </div>
                 <div className="about-us">
-                    <img src="/images/trangchu-06.png" className='img-top' alt="" />
-                    <img src="/images/trangchu-04.png" className='img-bottom' alt="" />
-                    <section className="message__box" data-aos="fade-right">
-                        <img src="/images/trangchu-05.png" className='img-logo' alt="" />
-                        <div className="message__title">
-                            CHỨNG CHỈ CỦA CHÚNG TÔI
+                    <img src="/images/original/home/star-image.png" className='img-top' alt="" />
+                    <Row className='wrap__about-us'>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }} className='d-flex a-e j-c'>
+                            <section className="message__box" data-aos="fade-right">
+                                <img src="/images/trangchu-05.png" className='img-logo' alt="" />
+                                <div className="message__title">
+                                    CHỨNG CHỈ CỦA CHÚNG TÔI
 						</div>
-                        <div className="message__description">
-                            Habimec cung cấp đầy đủ tất cả các chứng chỉ Việt
-                            Nam và quốc tế như: FDA, CE, ISO,….
+                                <div className="message__description">
+                                    Habimec cung cấp đầy đủ tất cả các chứng chỉ Việt
+                                    Nam và quốc tế như: FDA, CE, ISO,….
 						</div>
-                        <div className="message__button-more">
-                            More
-							<i className="icon-out-angle-right"></i>
-                        </div>
-                    </section>
+                                <div className="message__button-more grey">
+                                    {translations[lang].More}
+                                    <i className="icon-out-angle-right"></i>
+                                </div>
+                            </section>
+                        </Col>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+                            <img src="/images/trangchu-04.png" className='img-bottom' alt="" />
+                        </Col>
+                    </Row>
+
                 </div>
-                <Footer lang='vi' />
+                <Footer lang={lang} />
             </div>
         </div >
     )

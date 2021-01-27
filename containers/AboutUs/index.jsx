@@ -39,7 +39,7 @@ const AboutUs = (props) => {
     return (
         <div className="d-flex j-c">
             <div className='wrap__content'>
-                <Header />
+                <Header lang={lang} />
                 <main className='about-us__container'>
                     <img src="/images/about-us/aboutus-1.png" className='responsive__image' alt="" />
                     <section className="wrap__introduce">
@@ -236,7 +236,7 @@ Ngày càng nhiều người có cơ hội được sử dụng sản phẩm ch�
                                 </div>
                             </div>
                         </div>
-
+                        <img src="/images/original/left-an-toan.png" className='right-content-image' alt="" />
                     </section>
                 </main>
                 <Footer />

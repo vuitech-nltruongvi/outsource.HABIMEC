@@ -3,12 +3,17 @@
 @import "certificate";
 @import "productdetail";
 @import "product";
+@import "contact";
 
 .example-container div {
   background: white;
   border-radius: 30px;
   width: 150px;
   height: 150px;
+}
+
+.google-react {
+
 }
 
 .toggle-menu__button {
@@ -38,7 +43,7 @@ nav {
 
 // Slick
 .slick-next {
-  right: 30px !important;
+  right: 50px !important;
 
   &::before {
     font-family: "icon-out" !important;
@@ -49,7 +54,7 @@ nav {
     text-transform: none;
     line-height: 1;
     content: "\eaef" !important;
-    font-size: 50px !important;
+    font-size: 60px !important;
   }
 }
 .slick-dots {
@@ -58,7 +63,7 @@ nav {
 
 .slick-prev {
   z-index: 100;
-  left: 10px !important;
+  left: 20px !important;
 
   &::before {
     font-family: "icon-out" !important;
@@ -69,7 +74,7 @@ nav {
     text-transform: none;
     content: "\eaf0" !important;
     line-height: 1;
-    font-size: 50px !important;
+    font-size: 60px !important;
   }
 }
 
@@ -98,7 +103,7 @@ a {
 
   .home__header {
     position: relative;
-    height: 60px;
+    height: 70px;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -109,9 +114,9 @@ a {
       align-items: center;
       color: #e2cb9c;
       height: 100%;
-      font-size: 20px;
-      padding-left: 30px;
-      width: 35vw;
+      font-size: 16px;
+      padding-left: 60px;
+      width: 40vw;
       background-color: #142f53;
       clip-path: polygon(0 0, 100% 1%, 90% 100%, 0% 100%);
 
@@ -128,7 +133,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 65vw;
+      width: 60vw;
       padding-right: 5rem;
 
       .menu__list {
@@ -185,24 +190,34 @@ a {
   }
 
   .home__message {
-    top: -6px;
+    top: -5px;
     overflow: hidden;
     position: relative;
-    background-image: url(../public/images/trangchu-24.png);
+    background-image: url(../public/images/original/home/wrap-image-2.png);
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    // min-height: 600px;
+
+    .image__hand {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+    }
   }
 
   .message__box {
-    margin-left: 120px;
-    width: 620px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &.home-box-2 {
+      padding: 120px 0px 160px 0px;
+    } 
 
     .message__title {
       text-align: center;
@@ -226,6 +241,7 @@ a {
     }
 
     .message__description {
+      width: 600px;
       font-variant: normal;
       font-weight: normal;
       font-stretch: normal;
@@ -233,7 +249,7 @@ a {
       font-size: 16px;
       text-align: justify;
       color: #fff;
-      padding: 20px 0px 20px 0px;
+      padding: 30px 0px 20px 0px;
     }
 
     .message__button-more {
@@ -244,39 +260,53 @@ a {
       padding: 5px 0px;
       font-size: 16px;
       width: 150px;
-      background-color: #fff;
+      background: linear-gradient(to right, #142f53 50%, white 50%);
+      background-size: 200% 100%;
+      background-position:right bottom;            
       display: flex;
       z-index: 1;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       border-radius: 10rem;
-      transition: all 200ms;
+      transition: all 300ms;
+
+      &.grey {
+        background: linear-gradient(to right, #142f53 50%, #414142 50%);
+        background-size: 200% 100%;
+        background-position:right bottom;    
+        color: #fff;
+      }
 
       i {
         margin-left: 5px;
       }
 
-      &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        border-radius: 10rem;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        width: 0%;
-        height: 100%;
-        background-color: #142f53;
-        transition: all 0.3s;
-        border-radius: 10rem;
-      }
       &:hover {
+        background-position: left bottom;
         color: #fff;
-        &::before {
-          width: 100%;
-        }
       }
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   display: block;
+      //   border-radius: 10rem;
+      //   bottom: 0;
+      //   left: 0;
+      //   z-index: -1;
+      //   width: 0%;
+      //   height: 100%;
+      //   background-color: #142f53;
+      //   transition: all 0.3s;
+      //   border-radius: 10rem;
+      // }
+      // &:hover {
+      //   color: #fff;
+      //   &::before {
+      //     width: 100%;
+      //   }
+      // }
     }
   }
 
@@ -351,29 +381,33 @@ a {
     height: auto;
     min-height: 600px;
 
-    .img-info {
-      position: relative;
-      margin-left: 50px;
+    .wrap-more-info__image {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+      align-items: center;
+      .more-info__image {
+        width: 90%;
+      }  
+    }
 
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        height: 400px;
-        width: 50vw;
-        left: -7px;
-        z-index: -1;
-        bottom: -7px;
-        background-color: #e7f5f9ff;
-        box-shadow: 10px 10px 17px -16px rgba(0, 0, 0, 0.75);
-      }
+    .wrap-more-info__content {
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
 
     .more-info__right-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 130px;
+      justify-content: center;
+
       .right-content__title {
         position: relative;
         font-family: Myriad Pro Bold;
-        font-size: 20px;
+        font-size: 23px;
         color: black;
         display: flex;
         flex-direction: column;
@@ -405,7 +439,7 @@ a {
           .item--bold {
             font-family: Segoe UI Semibold;
             color: #25a8e0;
-            font-size: 16px;
+            font-size: 24px;
 
             &.grey {
               color: #414142;
@@ -423,7 +457,11 @@ a {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 600px;
+    min-height: 700px;
+
+    .wrap__about-us {
+      height: 700px;
+    }
 
     .img-top {
       position: absolute;
@@ -435,24 +473,26 @@ a {
       position: absolute;
       bottom: 0px;
       right: 20px;
-      width: 50%;
+      width: 90%;
       height: auto;
     }
     .img-logo {
-      width: 100px;
+      width: 150px;
     }
 
     .message__box {
-      justify-content: center;
+      justify-content: flex-end;
       width: 400px;
+      padding-bottom: 60px;
       .message__title {
         color: #59595bff;
         margin-top: 10px;
+        font-size: 28px;
 
         &::after {
           position: relative;
           content: "";
-          height: 2px;
+          height: 3px;
           width: 50px;
           background-color: #25a8e0ff;
           display: block;
@@ -462,29 +502,37 @@ a {
 
       .message__description {
         color: #59595bff;
+        padding: 30px 0px 60px 0px;
+        width: 400px;
         text-align: center;
-      }
-
-      .message__button-more {
-        background-color: #59595bff;
-        color: #fff;
       }
     }
   }
 
   .home__contact {
     position: relative;
-    background-image: url(../public/images/trangchu-16.png);
+    background-image: url('../public/images/original/home/Banner 1-05.png');
     background-position: center;
     background-size: cover;
     width: 100%;
-    min-height: 300px;
-    padding: 10px 30px;
+    padding: 10px 0px 50px 0px;
+    // min-height: 500px;
     height: auto;
 
     .contact__content {
       position: relative;
       padding: 20px 10px 20px 0px;
+
+      .mobile__lang {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        display: none;
+      }
+
+      .contact-logo {
+        width: 50%;
+      }
 
       .menu__list {
         display: flex;
@@ -494,6 +542,10 @@ a {
           cursor: pointer;
           font-size: 16px;
           color: #bbbebfff;
+
+          &:hover {
+            color: #142f53;
+          }
         }
       }
 
@@ -543,7 +595,22 @@ a {
       position: absolute;
       left: 0px;
       padding: 0px 20px;
-      top: -30px;
+      bottom: 20px;
+    }
+  }
+
+  .slick__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .slick-dots {
+    .slick-active {
+      .slick__dot {
+        background-color: #142f53;
+      }
     }
   }
 }
@@ -589,12 +656,19 @@ a {
   font-weight: 500;
 }
 
+
+
+.image-mobile {
+  display: none !important; 
+}
+
+
 @media only screen and (min-width: 1800px) {
   html,
   body {
     font-size: 16px !important;
   }
-  .home__message,
+  // .home__message,
   .left__content,
   .right__content,
   .more-info,
@@ -607,7 +681,74 @@ a {
   }
 }
 
+.wrap-image-hand {
+  display: block;
+}
+
 @media only screen and (max-width: 800px) {
+  .image-mobile {
+    display: block !important;
+  }
+
+  .wrap-more-info__image {
+    display: flex;
+    justify-content: center !important;
+    height: 100%;
+    align-items: center;
+   
+  }
+
+
+  .more-info {
+    .more-info__right-content {
+      padding: 70px !important;
+      background-color: #fff;
+      margin-left: 0px !important;
+    }
+  }
+  
+  .home__message {
+    padding: 20px 0px !important;
+    .wrap-image-hand {
+        display: flex !important;
+        justify-content: flex-end !important;
+      .image__hand {
+        position: relative !important;
+      }
+    }
+    
+    .message__description {
+      width: 80% !important;
+    }
+
+
+
+    
+  }
+
+  .company__name {
+    font-size: 16px !important;
+  }
+
+  .contact__content {
+    padding: 10px 20px 50px 20px !important;
+
+    .mobile__lang {
+      display: block !important;
+    }
+    .contact-logo {
+      width: 30% !important;
+    }
+
+    .menu__list {
+      display: none !important;
+    }
+  }
+
+  .image-desktop {
+    display: none !important;
+  }
+
   .header__btn-menu {
     display: block !important;
     position: absolute;
@@ -630,12 +771,6 @@ a {
     }
   }
 
-  .box__button {
-    z-index: 3 !important;
-    position: fixed !important;
-    top: 600px !important;
-  }
-
   .message__box {
     margin-left: 0px !important;
     padding: 0px 30px !important;
@@ -650,7 +785,8 @@ a {
     height: 650px !important;
     .message__box {
       justify-content: flex-start !important;
-      padding-top: 80px !important;
+      padding-top: 100px !important;
+      margin-bottom: 50px !important;
     }
     .img-logo {
       width: 180px !important;
@@ -709,7 +845,7 @@ a {
 }
 
 .d-flex {
-  display: flex;
+  display: flex !important;
   position: relative;
   &.j-c {
     justify-content: center;
@@ -726,6 +862,7 @@ a {
   &.gap-20 {
     gap: 20px;
   }
+  &.a-e {align-items: flex-end;}
 }
 
 .icon-locale {
@@ -733,8 +870,8 @@ a {
   background-image: url(../public/svg/locale.svg);
   background-size: 14px;
   background-repeat: no-repeat;
-  height: 14px;
-  width: 14px;
+  height: 16px;
+  width: 16px;
 }
 .icon-contact {
   display: inline-block;

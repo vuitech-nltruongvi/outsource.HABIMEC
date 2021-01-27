@@ -24,6 +24,7 @@ const Header = (props) => {
                 { key: 'home', label: currentLang.home, path: `/${lang}` },
                 { key: 'about-us', label: currentLang.aboutUs, path: `/${lang}/about-us` },
                 { key: 'product', label: currentLang.product, path: `/${lang}/product` },
+                { key: 'certificate', label: currentLang.certificate, path: `/${lang}/certificate` },
                 { key: 'contact', label: currentLang.contact, path: `/${lang}/contact` },
             ]
         }
@@ -46,6 +47,10 @@ const Header = (props) => {
 
     const onClickMenuItem = (path) => {
         router.push(path)
+
+        if (isOpenDrawer) {
+            setOpenDrawer(false)
+        }
     }
 
     return (
@@ -53,7 +58,7 @@ const Header = (props) => {
             <header className='home__header'>
                 <div className="info-brand">
                     <img src="/logo.svg" width={60} alt="" />
-                    <span className='info-brand__title'>HABIMEC GROUP JSC</span>
+                    <span className='info-brand__title'>{translations[lang].HABIMECT_NAME}</span>
                 </div>
                 <div className='header__btn-menu'>
                     <Button shape='circle' size='large' onClick={onClickOpenMenu}>
@@ -90,21 +95,16 @@ const Header = (props) => {
                 width={'100%'}
             >
                 <Row gutter={[20, 20]} style={{ marginTop: 20 }}>
-                    <Col span={24}>
-                        <Button className='menu__item' size='large' style={{ width: '100%' }}>{currentLang.home}</Button>
+                    {menuHeader && menuHeader.length ? menuHeader.map(menuItem => {
+                        console.log('pathname', router.pathname, menuItem)
+                        const isActive = menuItem.path === router.pathname;
 
-                    </Col>
-                    <Col span={24}>
-                        <Button className='menu__item' size='large' style={{ width: '100%' }}>{currentLang.aboutUs}</Button>
-
-                    </Col>
-                    <Col span={24}>
-                        <Button className='menu__item' size='large' style={{ width: '100%' }}>{currentLang.product}</Button>
-
-                    </Col>
-                    <Col span={24}>
-                        <Button className='menu__item' size='large' style={{ width: '100%' }}>{currentLang.contact}</Button>
-                    </Col>
+                        return (
+                            <Col key={menuItem.key} span={24} >
+                                <Button onClick={() => onClickMenuItem(menuItem.path)} className='menu__item' size='large' style={{ width: '100%' }}>{menuItem.label}</Button>
+                            </Col>
+                        )
+                    }) : null}
                     <Col span={24}>
                         <div className="language__box" style={{ width: '100%', display: 'flex', gap: 10, justifyContent: 'center' }}>
                             <div className="language">
