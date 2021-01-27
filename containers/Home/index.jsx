@@ -197,7 +197,7 @@ export default function Home(props) {
                                 </div>
                             </section>
                         </Col>
-                        <Col xs={{ span: 24 }} md={{ span: 12 }}>
+                        <Col xs={{ span: 24 }} md={{ span: 12 }} className='mobile-center'>
                             <img src="/images/trangchu-04.png" className='img-bottom' alt="" />
                         </Col>
                     </Row>

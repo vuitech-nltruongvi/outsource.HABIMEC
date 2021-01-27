@@ -62,7 +62,7 @@ const Footer = (props) => {
                         </div>
                     </div>
                 </Col>
-                <Col xs={{ span: 24 }} md={{ span: 19 }}>
+                <Col xs={{ span: 24 }} md={{ span: 19 }} style={{ padding: 20 }}>
                     <div>
                         <Row className='menu__list' gutter={[10, 10]}>
                             <Col><span className='menu__item'>{translations[lang].home}</span></Col>
@@ -88,9 +88,9 @@ const Footer = (props) => {
                     </div>
                     <Row gutter={[10, 10]}>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <span className='d-flex gap-5'>
-                                <i className="icon-locale"></i>
-                                <div>
+                            <span className='d-flex'>
+                                <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
+                                <div className="ml-10">
                                     <div className="locale__label">VĂN PHÒNG ĐẠI ĐIỆN:</div>
                                     <div className="locale__address">
                                         51 Nguyen Cư Trinh, Phường Nguyễn Cư
@@ -98,12 +98,11 @@ const Footer = (props) => {
                                     </div>
                                 </div>
                             </span>
-
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <span className='d-flex gap-5'>
-                                <i className="icon-locale"></i>
-                                <div>
+                            <span className='d-flex'>
+                                <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
+                                <div className="ml-10">
                                     <div className="locale__label">NHÀ MÁY SỐ 1:</div>
                                     <div className="locale__address">
                                         KCN Quang Minh 1, Xã Quang Minh, Huyện
@@ -111,12 +110,11 @@ const Footer = (props) => {
                             </div>
                                 </div>
                             </span>
-
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <span className='d-flex gap-5 '>
-                                <i className="icon-locale"></i>
-                                <div>
+                            <span className='d-flex '>
+                                <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
+                                <div className="ml-10">
                                     <div className="locale__label">NHÀ MÁY SỐ 2:</div>
                                     <div className="locale__address">
                                         KCN Lai Uyên, Thị Trấn Lai Uyên,
@@ -130,28 +128,28 @@ const Footer = (props) => {
                     </Row>
                     <Row gutter={[10, 10]}>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <span className='d-flex gap-5 a-c'>
+                            <span className='d-flex a-c '>
                                 <i className="icon-contact"></i>
-                                <div className="text-normal">(84) 0899 589 333</div>
+                                <div className="text-normal ml-10">(84) 0899 589 333</div>
                             </span>
-                            <span className='d-flex gap-5 a-c mt-10'>
+                            <span className='d-flex a-c mt-10'>
                                 <i className="icon-email"></i>
-                                <div className="text-normal">hbm@habimecgroup.com.vn</div>
+                                <div className="text-normal ml-10">hbm@habimecgroup.com.vn</div>
                             </span>
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <span className='d-flex gap-5 a-c'>
+                            <span className='d-flex a-c'>
                                 <i className="icon-other"></i>
-                                <div className="text-normal">habimecgroup.com.vn/</div>
+                                <div className="text-normal ml-10">habimecgroup.com.vn/</div>
                             </span>
-                            <span className='d-flex gap-5 a-c mt-10'>
+                            <span className='d-flex a-c mt-10'>
                                 <i className="icon-tax"></i>
-                                <div className="text-normal">09599999999</div>
+                                <div className="text-normal ml-10">0316456293</div>
                             </span>
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
-                            <div className="d-flex gap-10 a-c">
-                                <i className='icon-facebook'></i>
+                            <div className="group__icon--you-face">
+                                <i className='icon-facebook mr-10'></i>
                                 <i className='icon-youtube'></i>
                             </div>
                         </Col>

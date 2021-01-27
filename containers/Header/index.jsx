@@ -57,10 +57,18 @@ const Header = (props) => {
         <>
             <header className='home__header'>
                 <div className="info-brand">
-                    <img src="/logo.svg" width={60} alt="" />
+                    <img src="/logo.svg" alt="" />
                     <span className='info-brand__title'>{translations[lang].HABIMECT_NAME}</span>
                 </div>
                 <div className='header__btn-menu'>
+                    <div className="language__box">
+                        <div className="language">
+                            <img src="/vi.svg" alt="" onClick={() => onClickLang('vi')} width={20} />
+                        </div>
+                        <div className="language">
+                            <img src="/en.svg" alt="" onClick={() => onClickLang('en')} width={20} />
+                        </div>
+                    </div>
                     <Button shape='circle' size='large' onClick={onClickOpenMenu}>
                         <i className="icon-out-menu"></i>
                     </Button>
@@ -68,7 +76,6 @@ const Header = (props) => {
                 <div className="right__menu">
                     <menu className="menu__list">
                         {menuHeader && menuHeader.length ? menuHeader.map(menuItem => {
-                            console.log('pathname', router.pathname, menuItem)
                             const isActive = menuItem.path === router.pathname;
 
                             return (
@@ -96,12 +103,11 @@ const Header = (props) => {
             >
                 <Row gutter={[20, 20]} style={{ marginTop: 20 }}>
                     {menuHeader && menuHeader.length ? menuHeader.map(menuItem => {
-                        console.log('pathname', router.pathname, menuItem)
                         const isActive = menuItem.path === router.pathname;
 
                         return (
                             <Col key={menuItem.key} span={24} >
-                                <Button onClick={() => onClickMenuItem(menuItem.path)} className='menu__item' size='large' style={{ width: '100%' }}>{menuItem.label}</Button>
+                                <Button type={isActive ? 'primary' : 'default'} onClick={() => onClickMenuItem(menuItem.path)} className='menu__item' size='large' style={{ width: '100%' }}>{menuItem.label}</Button>
                             </Col>
                         )
                     }) : null}

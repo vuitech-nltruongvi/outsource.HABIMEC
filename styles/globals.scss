@@ -120,7 +120,12 @@ a {
       background-color: #142f53;
       clip-path: polygon(0 0, 100% 1%, 90% 100%, 0% 100%);
 
+      img {
+        width: 60px;
+      }
+
       .info-brand__title {
+        font-weight: bolder;
         margin-left: 20px;
       }
     }
@@ -241,7 +246,7 @@ a {
     }
 
     .message__description {
-      width: 600px;
+      max-width: 600px;
       font-variant: normal;
       font-weight: normal;
       font-stretch: normal;
@@ -375,7 +380,7 @@ a {
     display: flex;
     gap: 100px;
     align-items: center;
-    background-image: url(../public/images/trangchu-25.png);
+    background-image: url('../public/images/original/home/wrap-image-3.png');
     background-position: center;
     background-size: cover;
     height: auto;
@@ -457,10 +462,10 @@ a {
     background-position: center;
     background-size: cover;
     width: 100%;
-    min-height: 700px;
 
     .wrap__about-us {
-      height: 700px;
+      height: 100%;
+      min-height: 700px;
     }
 
     .img-top {
@@ -592,8 +597,9 @@ a {
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      position: absolute;
+      position: fixed;
       left: 0px;
+      z-index: 100;
       padding: 0px 20px;
       bottom: 20px;
     }
@@ -690,21 +696,51 @@ a {
     display: block !important;
   }
 
+  .fs-14 {
+    font-size: 10px !important;
+  }
+  
+  .group__icon--you-face {
+   justify-content: center !important;
+  }
+
   .wrap-more-info__image {
+    background-image: url('../public/images/original/mobile/background-1.png') !important;
     display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
     justify-content: center !important;
-    height: 100%;
+    height: 344px !important;
     align-items: center;
    
   }
 
+  .company__name {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
 
   .more-info {
+    background-color: #fff !important;
+    background-image: none !important;
+    font-size: 11px !important;
+
+    .right-content__title {
+      font-size: 13px !important;
+    }
+
     .more-info__right-content {
       padding: 70px !important;
       background-color: #fff;
       margin-left: 0px !important;
     }
+
+    .item--bold {
+      font-size: 16px !important;
+    } 
+
+
   }
   
   .home__message {
@@ -714,20 +750,14 @@ a {
         justify-content: flex-end !important;
       .image__hand {
         position: relative !important;
+        width: 60% !important;
       }
     }
     
     .message__description {
       width: 80% !important;
     }
-
-
-
     
-  }
-
-  .company__name {
-    font-size: 16px !important;
   }
 
   .contact__content {
@@ -750,7 +780,8 @@ a {
   }
 
   .header__btn-menu {
-    display: block !important;
+    display: flex !important;
+    gap: 10px !important;
     position: absolute;
     right: 10px;
   }
@@ -764,7 +795,18 @@ a {
   }
   .home__header {
     .info-brand {
-      width: 80vw !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      width: max-content !important;
+      font-size: 10px !important;
+      .info-brand__title {
+        font-size: 10px !important;
+        margin-left: 10px !important  ;
+      }
+
+      img {
+        width: 40px !important;
+      }
     }
     .right__menu {
       display: none !important;
@@ -781,18 +823,27 @@ a {
     padding: 0px 30px;
   }
 
+  .mobile-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
   .about-us {
-    height: 650px !important;
+    min-height: 650px !important;
     .message__box {
       justify-content: flex-start !important;
       padding-top: 100px !important;
-      margin-bottom: 50px !important;
+      margin-bottom: 10px !important;
     }
+
+  
     .img-logo {
       width: 180px !important;
     }
     .img-bottom {
-      width: 80% !important;
+      position: relative !important;
+      width: 90% !important;
       right: 0 !important;
     }
   }
@@ -843,7 +894,8 @@ a {
 .mt-10 {
   margin-top: 10px;
 }
-
+.mr-10 {margin-right: 10px;}
+.ml-10 {margin-left: 10px;}
 .d-flex {
   display: flex !important;
   position: relative;
@@ -866,59 +918,60 @@ a {
 }
 
 .icon-locale {
+  margin-top: 7px;
   display: inline-block;
   background-image: url(../public/svg/locale.svg);
-  background-size: 14px;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 16px;
-  width: 16px;
+  height: 17px;
+  width: 17px;
 }
 .icon-contact {
   display: inline-block;
   background-image: url(../public/svg/contact.svg);
-  background-size: 14px;
+  background-size: 17px;
   background-repeat: no-repeat;
-  height: 14px;
-  width: 14px;
+  height: 17px;
+  width: 17px;
 }
 .icon-email {
   display: inline-block;
   background-image: url(../public/svg/email.svg);
-  background-size: 14px;
+  background-size: 17px;
   background-repeat: no-repeat;
-  height: 14px;
-  width: 14px;
+  height: 17px;
+  width: 17px;
 }
 .icon-other {
   display: inline-block;
   background-image: url(../public/svg/other.svg);
-  background-size: 14px;
+  background-size: 17px;
   background-repeat: no-repeat;
-  height: 14px;
-  width: 14px;
+  height: 17px;
+  width: 17px;
 }
 .icon-tax {
   display: inline-block;
   background-image: url(../public/svg/tax.svg);
-  background-size: 14px;
-  height: 14px;
-  width: 14px;
+  background-size: 17px;
+  height: 17px;
+  width: 17px;
 }
 .icon-facebook {
   display: inline-block;
   background-image: url(../public/svg/facbook.svg);
-  background-size: 14px;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 14px;
-  width: 14px;
+  height: 20px;
+  width: 20px;
 }
 .icon-youtube {
   display: inline-block;
   background-image: url(../public/svg/youtube.svg);
-  background-size: 14px;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 12px;
-  width: 14px;
+  height: 18px;
+  width: 26px;
 }
 .icon-caret-top {
   display: inline-block;
@@ -927,6 +980,11 @@ a {
   background-repeat: no-repeat;
   height: 5px;
   width: 14px;
+}
+
+.group__icon--you-face {
+  display: flex;
+  align-items: center;
 }
 
 .language__box {

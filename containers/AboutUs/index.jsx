@@ -135,7 +135,6 @@ Ngày càng nhiều người có cơ hội được sử dụng sản phẩm ch�
                         bgImage={'/images/about-us/aboutus-3.png'}
                         strength={200}
                         renderLayer={(percent) => {
-                            console.log("🚀 ~ file: index.jsx ~ line 138 ~ AboutUs ~ percent", percent)
                             return (
                                 <section className="wrap__images-slick">
                                     <div className="images__content">
