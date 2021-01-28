@@ -4,6 +4,7 @@
 @import "productdetail";
 @import "product";
 @import "contact";
+@import "pagination";
 
 .example-container div {
   background: white;
@@ -15,6 +16,7 @@
 .google-react {
 
 }
+
 
 .toggle-menu__button {
   z-index: 51;
@@ -110,6 +112,7 @@ a {
     width: 100%;
     .info-brand {
       font-family: "Segoe UI Semibold";
+      cursor: pointer;
       display: flex;
       align-items: center;
       color: #e2cb9c;
@@ -549,7 +552,7 @@ a {
           color: #bbbebfff;
 
           &:hover {
-            color: #142f53;
+            color: #9cd5e9;
           }
         }
       }
@@ -689,6 +692,7 @@ a {
 
 .wrap-image-hand {
   display: block;
+  position: relative;
 }
 
 @media only screen and (max-width: 800px) {
@@ -708,7 +712,7 @@ a {
     background-image: url('../public/images/original/mobile/background-1.png') !important;
     display: flex;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     justify-content: center !important;
     height: 344px !important;
     align-items: center;
@@ -746,9 +750,8 @@ a {
   .home__message {
     padding: 20px 0px !important;
     .wrap-image-hand {
-        display: flex !important;
-        justify-content: flex-end !important;
       .image__hand {
+        left: 40%;
         position: relative !important;
         width: 60% !important;
       }
@@ -848,9 +851,24 @@ a {
     }
   }
 
-  .carousel__bar {
-    .brand__image {
-      background-position: 77% !important;
+  .wrap__slider--home {
+    .carousel__bar {
+      .brand__image {
+        background-position: 77% !important;
+      }
+  
+      .slick-next,.slick-prev {
+        width: 30px !important;
+        height: 30px !important;
+  
+        &::before {
+          font-size: 25px !important;
+        }
+      }
+  
+      .slick-next {
+        right: 20px !important;
+      }
     }
   }
 }

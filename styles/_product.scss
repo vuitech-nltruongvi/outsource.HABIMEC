@@ -89,6 +89,8 @@
   }
 
   .product-content {
+    padding: 70px 0px 20px 0px;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -96,7 +98,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 100%;
+    width: 100%;
 
     .product-banner {
       position: relative;
@@ -123,6 +125,7 @@
           }
         }
         .banner-content-info {
+          text-align: justify;
           color: #e3cb9c;
           margin-top: 20px;
         }
@@ -192,5 +195,61 @@
       }
     }
   }
+  }
+}
+
+@media only screen and (max-width: 1024px) { 
+
+  .banner-content-title {
+    font-size: 13px !important;
+  }
+
+  .product-content {
+    padding: 50px 20px !important;
+  }
+
+  .banner-content {
+    width: 200px !important;
+  }
+
+  .product-slider__content {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .message__description {
+      font-size: 9px !important;
+      padding: 10px !important;
+      text-align: center !important;
+      margin-bottom: 0px !important;
+    } 
+
+    .message__button-more {
+      height: max-content !important;
+      font-size: 12px !important;
+      width: 100px !important;
+      padding: 5px 10px !important;
+    }
+
+    .slider {
+      width: 90% !important;
+    }
+  }
+
+  .banner-image {
+    position: absolute;
+    right: 10px;
+    width: 45% !important;
+    bottom: 0px;
+  }
+
+  .banner-content-info {
+    font-size: 10px !important;
+  }
+
+  .product-banner {
+    width: 100% !important;
+    height: max-content !important;
   }
 }

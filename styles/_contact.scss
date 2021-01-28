@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url(../public/images/contact/background.png);
     padding: 120px 0px 240px 0px;
     .logo-banner__box {
@@ -36,33 +38,40 @@
         min-height: 50vh;
         padding: 0px 50px 100px 50px;
     }
+
+    .image-more__info {
+        position: absolute;
+        bottom: 0px;
+        right: 10px;
+        width: 400px;
+    }
+
+
+    .wrap__map-image {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-map__box {
+        border: 4px solid #132f52;
+        width: 100%;
+        margin-left: 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        flex-direction: column;
+    }
 }
 
-.wrap__map-image {
-    display: flex;
-    align-items: center;
-}
 
-.image-more__info {
-    position: absolute;
-    bottom: 0px;
-    right: 10px;
-    width: 400px;
-}
 
-.image-map__box {
-    border: 4px solid #132f52;
-    width: 100%;
-    margin-left: 20px;
-    border-radius: 20px;
-}
 
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .underline__title {
     font-size: 20px;

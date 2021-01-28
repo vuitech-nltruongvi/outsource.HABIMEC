@@ -1,11 +1,32 @@
 // Libraries
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router'
 import { Row, Col } from 'antd';
 import { translations } from '../../constant';
 
 const Footer = (props) => {
-    const { lang = 'vi' } = props
+    const { lang = 'vi' } = props;
+
+    // Current Language
+    const currentLang = useMemo(() => {
+        return translations[lang]
+    }, [lang])
+
+
+    const menuHeader = useMemo(() => {
+        let draft = []
+        if (currentLang) {
+            draft = [
+                { key: 'home', label: currentLang.home, path: `/${lang}` },
+                { key: 'about-us', label: currentLang.aboutUs, path: `/${lang}/about-us` },
+                { key: 'product', label: currentLang.product, path: `/${lang}/product` },
+                { key: 'certificate', label: currentLang.certificate, path: `/${lang}/certificate` },
+                { key: 'contact', label: currentLang.contact, path: `/${lang}/contact` },
+            ]
+        }
+
+        return draft;
+    }, [currentLang])
 
     // State
     const [isShowBackTop, setShowBackTop] = useState(false);
@@ -15,6 +36,7 @@ const Footer = (props) => {
     const onClickLang = (lang) => {
         router.push(`/${lang}`)
     }
+
 
 
     useEffect(() => {
@@ -36,6 +58,10 @@ const Footer = (props) => {
     const onClickBackToTop = () => {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+    }
+
+    const onClickLink = (path) => {
+        router.push(path)
     }
 
     return (
@@ -65,11 +91,13 @@ const Footer = (props) => {
                 <Col xs={{ span: 24 }} md={{ span: 19 }} style={{ padding: 20 }}>
                     <div>
                         <Row className='menu__list' gutter={[10, 10]}>
-                            <Col><span className='menu__item'>{translations[lang].home}</span></Col>
-                            <Col><span className='menu__item'>{translations[lang].aboutUs}</span></Col>
-                            <Col><span className='menu__item'>{translations[lang].contact}</span></Col>
-                            <Col><span className='menu__item'>{translations[lang].certificate}</span></Col>
-                            <Col><span className='menu__item'>{translations[lang].event}</span></Col>
+                            {menuHeader.length ? menuHeader.map(item => {
+                                const isActive = item.path === router.pathname;
+
+                                return (
+                                    <Col onClick={() => onClickLink(item.path)} key={item.key}><span style={{ color: isActive ? '#9cd5e9' : null }}>{item.label}</span></Col>
+                                )
+                            }) : null}
                             <Col>
                                 <div className="language__box d-flex a-c gap-10">
                                     <div className="language">
@@ -91,10 +119,9 @@ const Footer = (props) => {
                             <span className='d-flex'>
                                 <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
                                 <div className="ml-10">
-                                    <div className="locale__label">VĂN PHÒNG ĐẠI ĐIỆN:</div>
+                                    <div className="locale__label">{translations[lang]['Representative office'].toUpperCase()}:</div>
                                     <div className="locale__address">
-                                        51 Nguyen Cư Trinh, Phường Nguyễn Cư
-                                        Trinh, Quận 1, TP. Hồ Chí Minh, Việt Nam.
+                                        {translations[lang]['address_office']}
                                     </div>
                                 </div>
                             </span>
@@ -103,11 +130,10 @@ const Footer = (props) => {
                             <span className='d-flex'>
                                 <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
                                 <div className="ml-10">
-                                    <div className="locale__label">NHÀ MÁY SỐ 1:</div>
+                                    <div className="locale__label">{translations[lang]['Factory No. 1'].toUpperCase()}:</div>
                                     <div className="locale__address">
-                                        KCN Quang Minh 1, Xã Quang Minh, Huyện
-                                        Mê Linh, Thành phố Hà Nôi, Việt Nam
-                            </div>
+                                        {translations[lang]['Factory No. 1 address']}
+                                    </div>
                                 </div>
                             </span>
                         </Col>
@@ -115,12 +141,10 @@ const Footer = (props) => {
                             <span className='d-flex '>
                                 <div style={{ width: 20 }} > <i className="icon-locale"></i></div>
                                 <div className="ml-10">
-                                    <div className="locale__label">NHÀ MÁY SỐ 2:</div>
+                                    <div className="locale__label">{translations[lang]['Factory No. 2']}:</div>
                                     <div className="locale__address">
-                                        KCN Lai Uyên, Thị Trấn Lai Uyên,
-                                        xã Long Nguyên, huyện Bàu
-                                        Bàng, tỉnh Bình Dương, Việt Nam
-                            </div>
+                                        {translations[lang]['Factory No. 2 address']}
+                                    </div>
                                 </div>
                             </span>
 
@@ -130,7 +154,7 @@ const Footer = (props) => {
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
                             <span className='d-flex a-c '>
                                 <i className="icon-contact"></i>
-                                <div className="text-normal ml-10">(84) 0899 589 333</div>
+                                <div className="text-normal ml-10">(+84)28 6685 8018</div>
                             </span>
                             <span className='d-flex a-c mt-10'>
                                 <i className="icon-email"></i>

@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import router from 'next/router'
 import { Row, Col, Button, Drawer } from 'antd';
 import Slider from 'react-slick';
-
+import Link from 'next/link'
 // Components
 import Header from 'containers/Header';
 import Footer from 'containers/Footer';
@@ -35,49 +35,55 @@ export default function Home(props) {
         },
     };
 
+    const banner = {
+        vi: [
+            { key: '1', desktop: '/images/original/banner/desktop/banner-1.png', mobile: '/images/original/banner/mobile/banner-1.jpg' },
+            { key: '2', desktop: '/images/original/banner/desktop/banner-2.png', mobile: '/images/original/banner/mobile/banner-2.jpg' },
+            { key: '3', desktop: '/images/original/banner/desktop/banner-3.png', mobile: '/images/original/banner/mobile/banner-3.jpg' },
+        ],
+        en: [
+            { key: '4', desktop: '/images/original/banner/desktop/banner-english-1.jpg', mobile: '/images/original/banner/mobile/banner-english-1.jpg' },
+            { key: '5', desktop: '/images/original/banner/desktop/banner-english-2.jpg', mobile: '/images/original/banner/mobile/banner-english-2.jpg' },
+            { key: '6', desktop: '/images/original/banner/desktop/banner-english-3.jpg', mobile: '/images/original/banner/mobile/banner-english-3.jpg' },
+        ]
+    }
+
+    const onClickMoreCertificate = () => {
+        router.push(`/${lang}/certificate`)
+    }
+
     return (
         <div className="d-flex j-c">
-            <div className='wrap__content'>
+            <div className='wrap__content wrap__slider--home animate__animated animate__fadeIn'>
                 <Head>
                     <title>{translations[lang].HABIMECT_NAME}</title>
                     <link rel="icon" href="/logo.svg" />
                 </Head>
                 <Header lang={props.lang} />
                 <Slider {...settings} className='carousel__bar'>
-                    <div>
-                        <img src="/images/original/banner/desktop/banner-1.png" className='responsive__image image-desktop' alt="" />
-                        <img src="/images/original/banner/mobile/banner-1.jpg" className='responsive__image image-mobile' alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/original/banner/desktop/banner-2.png" className='responsive__image image-desktop' alt="" />
-                        <img src="/images/original/banner/mobile/banner-2.jpg" className='responsive__image image-mobile' alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/original/banner/desktop/banner-3.png" className='responsive__image image-desktop' alt="" />
-                        <img src="/images/original/banner/mobile/banner-3.jpg" className='responsive__image image-mobile' alt="" />
-                    </div>
+                    {banner[lang].map(itemBanner => (
+                        <div key={itemBanner.key}>
+                            <img src={itemBanner.desktop} className='responsive__image image-desktop' alt="" />
+                            <img src={itemBanner.mobile} className='responsive__image image-mobile' alt="" />
+                        </div>
+                    ))}
                 </Slider>
                 <div className="home__message" >
                     <Row>
                         <Col xs={{ span: 24 }} md={{ span: 12 }}>
                             <section className="message__box home-box-2" data-aos="fade-left">
                                 <div className="message__title" >
-                                    THÔNG ĐIỆP
-						</div>
-                                <div className="message__description" >
-                                    Là Tập đoàn sản xuất hàng đầu trong lĩnh vực thiết bị y tế với
-                                    nhiều kinh nghiệm trong sản xuất, thương mại xuất khẩu sang
-                                    châu Âu và Mỹ. Sự bùng phát của Coronavirus mới đã gây ra một
-                                    cuộc khủng hoảng sức khỏe toàn cầu nghiêm trọng. Cùng bảo
-                                    vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh
-                                    Covid-19. Chúng tôi xin giới thiệu các sản phẩm chủ yếu bao
-                                    gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị
-                                    bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.....
-						</div>
-                                <div className="message__button-more" >
-                                    {translations[lang].More}
-                                    <i className="icon-out-angle-right"></i>
+                                    {translations[lang].MESSAGE}
                                 </div>
+                                <div className="message__description" >
+                                    {translations[lang].MESSAGE_DESCRIPTION_1}
+                                </div>
+                                <Link href={`${lang}/about-us`} >
+                                    <div className="message__button-more" >
+                                        {translations[lang].More}
+                                        <i className="icon-out-angle-right"></i>
+                                    </div>
+                                </Link>
                             </section>
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 12 }} className='wrap-image-hand'>
@@ -95,16 +101,16 @@ export default function Home(props) {
                         >
                             <section className="message__box">
                                 <div className="message__title">
-                                    GĂNG TAY Y TẾ NITRILE
-						</div>
+                                    {translations[lang].nitrile_title}
+                                </div>
                                 <div className="message__description">
-                                    Được làm từ cao su nhân tạo Nitrile. Găng tay Nitrile là
-                                    sản phẩm tuyệt vời dành cho những người bị dị ứng
-                                    với cao su tự nhiên....
-						</div>
-                                <div className="message__button-more">
-                                    {translations[lang].More}
-                                    <i className="icon-out-angle-right"></i></div>
+                                    {translations[lang].nitrile_description}
+                                </div>
+                                <Link href={`${lang}/product/nitrile-medical-gloves`}>
+                                    <div className="message__button-more">
+                                        {translations[lang].More}
+                                        <i className="icon-out-angle-right"></i></div>
+                                </Link>
                             </section>
                         </section>
                     </Col>
@@ -116,15 +122,16 @@ export default function Home(props) {
                         >
                             <section className="message__box">
                                 <div className="message__title">
-                                    GĂNG TAY Y TẾ LATEX GLOVES
-						</div>
+                                    {translations[lang].latex_title}
+                                </div>
                                 <div className="message__description">
-                                    Găng tay latex là loại găng tay được chiết xuất 100% từ
-                                    cao su tự nhiên....
-						</div>
-                                <div className="message__button-more">
-                                    {translations[lang].More}
-                                    <i className="icon-out-angle-right"></i></div>
+                                    {translations[lang].latex_description}
+                                </div>
+                                <Link href={`${lang}/product/latex-medical-gloves`}>
+                                    <div className="message__button-more">
+                                        {translations[lang].More}
+                                        <i className="icon-out-angle-right"></i></div>
+                                </Link>
                             </section>
                         </section>
                     </Col>
@@ -137,39 +144,39 @@ export default function Home(props) {
                         <Col xs={{ span: 24 }} md={{ span: 12 }} className='wrap-more-info__content'>
                             <div className="more-info__right-content" data-aos="zoom-in-up">
                                 <span className='right-content__title'>
-                                    NHÀ MÁY SẢN XUẤT GĂNG TAY Y TẾ
-						        </span>
+                                    {translations[lang]['latex_medical_gloves'].toUpperCase()}
+                                </span>
                                 <div className='mt-10'>
-                                    <strong className="f-myriad fs-14">Địa điểm: </strong>
-                                    <span className='f-segoe fs-14'>KCN Lai Uyên, Lai Uyên, Bàu Bàng, Bình Dương</span>
+                                    <strong className="f-myriad fs-14">{translations[lang]['location']}: </strong>
+                                    <span className='f-segoe fs-14'>{translations[lang]['address']}</span>
                                     <ul className='content__list'>
                                         <li className='content__item'>
-                                            Tổng mức đầu tư dự kiến:
-									<div>
+                                            {translations[lang]['Estimated total investment']}
+                                            <div>
                                                 <span className="item--bold">890,000,000</span> &nbsp;
 										<span className='fs-14'>USD</span>
                                             </div>
                                         </li>
                                         <li className='content__item'>
-                                            Tổng diện tích nhà máy:
-								<div>
+                                            {translations[lang]['Total factory area']}
+                                            <div>
                                                 <span className="item--bold">220,000m<sup>2</sup></span> &nbsp;
 										<span className='item--bold grey'>= 22ha</span> &nbsp;
-										<span className='fs-14'>(chiều cao 16m– 19m)</span>
+										<span className='fs-14'>{translations[lang]['(hight 16m - 19m)']}</span>
                                             </div>
                                         </li>
                                         <li className='content__item'>
-                                            Số lượng dây chuyền sản xuất:
-									<div>
+                                            {translations[lang]['Number of production lines']}
+                                            <div>
                                                 <span className='item--bold'>195</span> &nbsp;
-										<span className='fs-14'>dây chuyền</span>
+										<span className='fs-14'>{translations[lang]['lines']}</span>
                                             </div>
                                         </li>
                                         <li className='content__item'>
-                                            Công suất (24/24h):
-									<div>
-                                                <span className='item--bold'>1,100,000 – 1,300,000</span> &nbsp;
-										<span className='fs-14'>chiếc/ dây chuyền</span>
+                                            {translations[lang]['Capacity']}
+                                            <div>
+                                                <span className='item--bold'>1,008,000 – 1,191,000</span> &nbsp;
+										<span className='fs-14'>{translations[lang]['gloves  per line']}</span>
                                             </div>
                                         </li>
                                     </ul>
@@ -185,13 +192,12 @@ export default function Home(props) {
                             <section className="message__box" data-aos="fade-right">
                                 <img src="/images/trangchu-05.png" className='img-logo' alt="" />
                                 <div className="message__title">
-                                    CHỨNG CHỈ CỦA CHÚNG TÔI
-						</div>
+                                    {translations[lang]['our certificate'].toUpperCase()}
+                                </div>
                                 <div className="message__description">
-                                    Habimec cung cấp đầy đủ tất cả các chứng chỉ Việt
-                                    Nam và quốc tế như: FDA, CE, ISO,….
-						</div>
-                                <div className="message__button-more grey">
+                                    {translations[lang]['Habimec provides']}
+                                </div>
+                                <div onClick={onClickMoreCertificate} className="message__button-more grey">
                                     {translations[lang].More}
                                     <i className="icon-out-angle-right"></i>
                                 </div>

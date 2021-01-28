@@ -16,9 +16,13 @@ const AboutUs = (props) => {
     // Props
     const { lang = '' } = props;
 
+    const onClickMap = (link) => {
+        window.open(link)
+    }
+
     return (
         <div className="d-flex j-c">
-            <div className='wrap__content'>
+            <div className='wrap__content animate__animated animate__fadeIn'>
                 <Header lang={lang} />
                 <div className="wrap__contact">
                     <div className="box-content__contact">
@@ -38,43 +42,39 @@ const AboutUs = (props) => {
                             <img src="/images/trangchu-02.png" width={60} alt="" />
                             <div className="brand__title">{translations[lang].CONTACT_US}</div>
                         </div>
-                        <Row style={{ width: '100%' }} gutter={[20, 20]} className='flex-center'>
-                            <Col xs={{ span: 24 }} md={{ span: 12 }} >
-                                <div className="underline__title">Văn phòng đại diện:</div>
-                                <div className='text__description'>51 Nguyen Cư Trinh, Phường Nguyễn Cư Trinh,
-Quận 1, TP. Hồ Chí Minh, Việt Nam.</div>
+                        <Row style={{ width: '100%' }} gutter={[20, 20]} >
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} className='flex-center'>
+                                <div className="underline__title">{translations[lang]['Representative office']}</div>
+                                <div className='text__description'>{translations[lang].['address_office']}</div>
                             </Col>
                             <Col xs={{ span: 24 }} md={{ span: 12 }}>
                                 <div className='wrap__map-image'>
                                     <img src="/svg/next.svg" className='contact-icon--next' alt="" />
-                                    <img className='image-map__box' src="/svg/map.svg" alt="" />
+                                    <img onClick={() => onClickMap('https://goo.gl/maps/YFFPwa2SbgpCvByd6')} className='image-map__box' src="/svg/map.svg" alt="" />
                                 </div>
                             </Col>
                         </Row>
-                        <Row style={{ width: '100%' }} gutter={[20, 20]} className='flex-center'>
-                            <Col xs={{ span: 24 }} md={{ span: 12 }}>
-                                <div className="underline__title">Nhà máy số 1:</div>
-                                <div className='text__description'>KCN Quang Minh 1, Xã Quang Minh, Huyện Mê
-Linh, Thành phố Hà Nôi, Việt Nam</div>
+                        <Row style={{ width: '100%' }} gutter={[20, 20]} >
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} className='flex-center'>
+                                <div className="underline__title">{translations[lang]['Factory No. 1']}</div>
+                                <div className='text__description'>{translations[lang]['Factory No. 1 address']}</div>
                             </Col>
                             <Col xs={{ span: 24 }} md={{ span: 12 }}>
                                 <div className='wrap__map-image'>
                                     <img src="/svg/next.svg" className='contact-icon--next' alt="" />
-                                    <img className='image-map__box' src="/svg/map-2.svg" alt="" />
+                                    <img onClick={() => onClickMap('https://goo.gl/maps/P1vs4ZFyaMVeneMs6')} className='image-map__box' src="/svg/map-2.svg" alt="" />
                                 </div>
                             </Col>
                         </Row>
-                        <Row style={{ width: '100%' }} gutter={[20, 20]} className='flex-center'>
-                            <Col xs={{ span: 24 }} md={{ span: 12 }}>
-                                <div className="underline__title">Nhà máy số 2:</div>
-                                <div className='text__description'>KCN Lai Uyên, Thị Trấn Lai Uyên, xã Long Nguyên,
-                                huyện Bàu Bàng, tỉnh Bình Dương, Việt Nam
-</div>
+                        <Row style={{ width: '100%' }} gutter={[20, 20]} >
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} className='flex-center'>
+                                <div className="underline__title">{translations[lang]['Factory No. 2']}</div>
+                                <div className='text__description'>{translations[lang]['Factory No. 2 address']} </div>
                             </Col>
                             <Col xs={{ span: 24 }} md={{ span: 12 }}>
                                 <div className='wrap__map-image'>
                                     <img src="/svg/next.svg" className='contact-icon--next' alt="" />
-                                    <img className='image-map__box' src="/svg/map-3.svg" alt="" />
+                                    <img onClick={() => onClickMap('https://goo.gl/maps/aXy8zUjVKqGUw5ct8')} className='image-map__box' src="/svg/map-3.svg" alt="" />
                                 </div>
                             </Col>
                         </Row>
@@ -85,7 +85,7 @@ Linh, Thành phố Hà Nôi, Việt Nam</div>
                     <img className='image-more__info' src="/images/contact/g76.png" alt="" />
                 </div>
 
-                <Footer />
+                <Footer lang={lang} />
             </div>
         </div >
     );

@@ -38,6 +38,7 @@ const Header = (props) => {
     const router = useRouter();
 
     const onClickLang = (lang) => {
+        setOpenDrawer(false);
         router.push(`/${lang}`)
     }
 
@@ -53,10 +54,14 @@ const Header = (props) => {
         }
     }
 
+    const onClickBrand = () => {
+        router.push(`/${lang}`)
+    }
+
     return (
         <>
-            <header className='home__header'>
-                <div className="info-brand">
+            <header className='home__header '>
+                <div className="info-brand" onClick={onClickBrand}>
                     <img src="/logo.svg" alt="" />
                     <span className='info-brand__title'>{translations[lang].HABIMECT_NAME}</span>
                 </div>

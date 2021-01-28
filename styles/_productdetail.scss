@@ -1,14 +1,19 @@
-.wrap__product {
-  .product-content {
+.wrap__product-detail {
+  background-image: url('../public/images/original/Banner 1-19.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .product-content-detail {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 100px;
-    .product-box {
+  .product-box {
       border-radius: 10px;
       border: 2px solid #132f52;
       width: 600px;
       height: 750px;
+      backdrop-filter: blur(10px);
       .logo-banner {
         height: 60px;
         max-width: 500px;
@@ -34,16 +39,36 @@
         max-width: 600px;
         align-items: center;
         padding: 0 3rem;
+
+        .product__label {
+          font-weight: bold;
+          font-size: 18px;
+          padding-top: 10px;
+        }
       }
     }
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .product-content {
-    padding: 60px 20px !important;
-    .logo-banner {
-      max-width: 400px !important;
+  .wrap__product-detail{
+    .product-box {
+      max-width: 90% !important;
+    }
+
+    .product-content-detail {
+      padding: 60px 0px !important;
+      
+      .logo-banner {
+        max-width: 320px !important;
+        display:  flex !important;
+        justify-content: space-around !important;
+      }
+
+      .banner-content {
+        font-size: 13px !important;
+        width: max-content !important;
+      }
     }
   }
 }
