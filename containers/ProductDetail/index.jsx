@@ -10,7 +10,8 @@ import { translations } from 'constant'
 
 const ProductDetail = (props) => {
 
-    const { lang, product } = props;
+    const { lang = 'vi', product = {} } = props;
+    const { title = 'nitrile_title', content = '' } = product;
 
     return (
         <div className='wrap__content animate__animated animate__fadeIn'>
@@ -20,12 +21,12 @@ const ProductDetail = (props) => {
                     <div className="product-box">
                         <div className="logo-banner">
                             <img src='/images/trangchu-02.png' width={60}></img>
-                            <div className='banner-content'>{translations[lang][product.title]}</div>
+                            <div className='banner-content'>{translations[lang][title || "nitrile_title"]}</div>
                         </div>
                         <div className="product-box-content">
                             <b className='product__label'>{translations[lang].content.toUpperCase()}</b>
                             <br />
-                            <p>{translations[lang][product.content]}</p>
+                            <p>{translations[lang][content]}</p>
                             <br />
                             <img src={product.image} style={{ maxWidth: '100%' }}></img>
                             <br />
