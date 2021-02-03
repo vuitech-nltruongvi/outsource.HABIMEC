@@ -69,8 +69,6 @@ const AboutUs = (props) => {
         autoplay: true,
         arrows: false,
         autoplaySpeed: 4000,
-        centerMode: true,
-        centerPadding: 10,
         cssEase: "linear",
         slidesToShow: 4,
         swipeToSlide: true,
@@ -145,6 +143,7 @@ const AboutUs = (props) => {
                                             <div className="box__content">
                                                 <img src="/images/about-us/Banner 1-14.png" className='info__image' alt="" />
                                                 {translations[lang].MESSAGE_DESCRIPTION_3}
+
                                             </div>
                                         </motion.div>
                                     </Col>
@@ -243,8 +242,7 @@ const AboutUs = (props) => {
                                         <li className='content__item'>
                                             {translations[lang]['Total factory area']}
                                             <div>
-                                                <span className="item--bold">220,000m<sup>2</sup></span> &nbsp;
-										<span className='item--bold grey'>= 22ha</span> &nbsp;
+                                                <span className="item--bold">390,000m<sup>2</sup> = 39ha</span> &nbsp;
 										<span className='fs-14'>{translations[lang]['(hight 16m - 19m)']}</span>
                                             </div>
                                         </li>

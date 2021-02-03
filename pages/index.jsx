@@ -13,8 +13,8 @@ const Main = () => {
 
 	return (
 		<div>
-			<img src='/images/comming-soon.jpg' width={'100%'} />
-			{/* <Home /> */}
+			{/* <img src='/images/comming-soon.jpg' width={'100%'} /> */}
+			<Home />
 		</div>
 	);
 };

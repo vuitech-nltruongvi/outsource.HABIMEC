@@ -24,7 +24,7 @@ export const translations = {
         vision: 'Tầm nhìn:',
         vision_description: 'Trở thành một trong những công ty sở hữu chuỗi cung ứng tốt nhất trong lĩnh vực Thiết bị Y tế theo tiêu chuẩn trên toàn cầu.',
         mission: 'Sứ mệnh:',
-        mission_description:'Công ty Tập Đoàn Habimec được hình thành với mong muốn mang đến cộng đồng những trang thiết bị Y tế tốt nhất thế giới. Ngày càng nhiều người có cơ hội được sử dụng sản phẩm chất lượng với mức chi phí hợp lý.',
+        mission_description: 'Công ty Tập Đoàn Habimec được hình thành với mong muốn mang đến cộng đồng những trang thiết bị Y tế tốt nhất thế giới. Ngày càng nhiều người có cơ hội được sử dụng sản phẩm chất lượng với mức chi phí hợp lý.',
         core_value: 'Giá trị cốt lõi:',
         core_value_description: 'Lấy lợi ích sức khỏe của cộng đồng làm yếu tố hàng đầu, là kim chỉ nam cho mọi hoạt động kinh doanh của công ty.',
         product_description: 'Cùng bảo vệ sức khỏe cộng đồng và ngăn ngừa sự lây lan của bệnh Covid-19, chúng tôi xin giới thiệu các sản phẩm chủ yếu bao gồm: Khẩu trang, quần áo chống dịch & găng tay và các thiết bị bảo vệ khác có thể giúp ngăn chặn sự lây lan của coronavirus.',
@@ -36,7 +36,7 @@ export const translations = {
         "Capacity": "Công suất (22/24h)",
         "gloves  per line": "chiếc/ dây chuyền",
         "lines": "dây chuyền",
-        "(hight 16m - 19m)": "(chiều cao 16m– 19m)",
+        "(hight 16m - 19m)": "(chiều cao 16m – 19m)",
         "Habimec provides": "Habimec cung cấp đầy đủ tất cả các chứng chỉ Việt Nam và quốc tế như: FDA, CE, ISO,….",
         "our certificate": "Chứng chỉ của chúng tôi",
         "Representative office": "VĂN PHÒNG ĐẠI ĐIỆN",
@@ -45,8 +45,8 @@ export const translations = {
         "address_office": "51 Nguyen Cư Trinh, Phường Nguyễn Cư Trinh, Quận 1, TP. Hồ Chí Minh, Việt Nam",
         "Factory No. 1 address": "KCN Quang Minh 1, Xã Quang Minh, Huyện Mê Linh, Thành phố Hà Nôi, Việt Nam",
         "Factory No. 2 address": "KCN Lai Uyên, Thị Trấn Lai Uyên, xã Long Nguyên, huyện Bàu Bàng, tỉnh Bình Dương, Việt Nam",
-        "image-banner-about-us": ""
-
+        "image-banner-about-us": "",
+        "product is updating": "Sản phẩm đang được cập nhật"
     },
     en: {
         home: 'Home',
@@ -65,14 +65,14 @@ export const translations = {
         nitrile_title: 'NITRILE MEDICAL GLOVES',
         nitrile_description: 'Made from Nitrile synthetic rubber. Nitrile gloves are great for those who are allergic to natural rubber....',
         latex_title: 'LATEX MEDICAL GLOVES',
-        latex_description: 'Găng tay latex là loại găng tay được chiết xuất 100% từ cao su tự nhiên....',
+        latex_description: 'Currently  this product  is not availble',
         event: 'Event',
         content: 'Content',
         location: 'Location',
         vision: 'Vision:',
         vision_description: 'To become the company that owns the best supply chain in the field of Medical Equipment  according to global standards',
         mission: 'Mission:',
-        mission_description:'Habimec Group Company was formed with the desire to bring to the community the best medical equipment in the world. More and more people have the opportunity to use quality products at a reasonable cost.',
+        mission_description: 'Habimec Group Company was formed with the desire to bring to the community the best medical equipment in the world. More and more people have the opportunity to use quality products at a reasonable cost.',
         core_value: 'Core value:',
         core_value_description: 'Taking the health benefits of the community as the number one factor. That is the guideline for all business activities within the company.',
         product_description: 'The outbreak of Corona virus has caused a serious global health crisis, being able to protect public health and prevent the spread of Covid-19 is one of our main goals and we would like to introduce some of our main products that include: Face masks, anti-epidemic clothing, gloves and other protective equipment that can help to prevent the spread of Corona virus.',
@@ -95,10 +95,41 @@ export const translations = {
         "Factory No. 1 address": "Quang Minh Industrial Park 1, Quang Minh Commune, Me Linh District, Ha Noi Capital, Vietnam",
         "Factory No. 2 address": "Lai Uyen Industrial Park, Lai Uyen Town, Long Nguyen Commune, Bau Bang District, Binh Duong Province, Vietnam",
         "our certificate": "Our certificates",
+        "product is updating": "Product is updating"
     }
 }
 
 export const pathProductDetails = [
-    { key: 'sp-1', name: 'GĂNG TAY Y TẾ NITRILE', id: 'nitrile-medical-gloves', content: 'nitrile_description', title: 'nitrile_title', image: '/images/original/product/Banner 1-08.png' },
-    { key: 'sp-2', name: 'GĂNG TAY Y TẾ LATEX GLOVES', id: 'latex-medical-gloves', content: 'latex_description', title: 'latex_title', image: '/images/original/product/Banner 1-10.png' },
+    {
+        key: 'sp-1',
+        name: 'GĂNG TAY Y TẾ NITRILE',
+        id: 'nitrile-medical-gloves',
+        content: 'nitrile_description',
+        title: 'nitrile_title',
+        image: '/images/original/product/Banner 1-08.png',
+        listImage: [
+            '/images/original/product/gang tay habimec-08.jpg',
+            '/images/original/product/gang tay habimec-09.jpg',
+            '/images/original/product/gang tay habimec-10.jpg',
+            '/images/original/product/gang tay habimec-11.jpg',
+            '/images/original/product/gang tay habimec-12.jpg',
+
+        ]
+    },
+    {
+        key: 'sp-2',
+        name: 'GĂNG TAY Y TẾ LATEX GLOVES',
+        id: 'latex-medical-gloves',
+        content: 'latex_description',
+        title: 'latex_title',
+        image: '/images/original/product/Banner 1-10.png',
+        listImage: [
+            '/images/original/product/gang tay habimec-08.jpg',
+            '/images/original/product/gang tay habimec-09.jpg',
+            '/images/original/product/gang tay habimec-10.jpg',
+            '/images/original/product/gang tay habimec-11.jpg',
+            '/images/original/product/gang tay habimec-12.jpg',
+
+        ]
+    },
 ]

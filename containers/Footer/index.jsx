@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router'
 import { Row, Col } from 'antd';
 import { translations } from '../../constant';
+import Link from 'next/link'
 
 const Footer = (props) => {
     const { lang = 'vi' } = props;
@@ -67,9 +68,11 @@ const Footer = (props) => {
     return (
         <footer className="home__contact">
             <div className="box__button">
+                <Link href={`/${lang}/contact`}>
                 <div className="button__round animate__slow animate__animated animate__heartBeat animate__infinite">
                     <i className="icon-out-contact"></i>
                 </div>
+                </Link>
                 <div className="button__round" style={{ display: isShowBackTop ? 'flex' : 'none' }} onClick={onClickBackToTop}>
                     <i className="icon-out-caret"></i>
                 </div>

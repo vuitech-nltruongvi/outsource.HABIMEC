@@ -185,12 +185,16 @@
 
     .certificate__content {
       .slick-next {
-        right: 20px !important;
+        z-index: 300;
         top: 30% !important;
       }
+
+      .slick-next {right: -25px !important;}
+      .slick-prev {left: 20px !important;}
+
       
       .slick-prev {
-        left: 20px !important;
+        z-index: 300;
         top: 30% !important;
       }
     }

@@ -4,15 +4,17 @@
   background-size: cover;
 
   .product-content-detail {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px 100px;
   .product-box {
+    position: relative;
       border-radius: 10px;
       border: 2px solid #132f52;
       width: 600px;
-      height: 750px;
+      min-height: 750px;
       backdrop-filter: blur(10px);
       .logo-banner {
         height: 60px;
@@ -21,10 +23,10 @@
         background-color: $color-blue;
         display: flex;
         align-items: center;
-        padding: 0 2rem;
-        bottom: 5rem;
+        // padding: 0 2rem;
+        bottom: 30px;
         position: relative;
-        top: -5%;
+        // top: -5%;
         margin: 0 auto;
         .banner-content {
           margin-left: 1rem;
@@ -38,7 +40,7 @@
       .product-box-content {
         max-width: 600px;
         align-items: center;
-        padding: 0 3rem;
+        padding: 0 2rem 20px 2rem;
 
         .product__label {
           font-weight: bold;

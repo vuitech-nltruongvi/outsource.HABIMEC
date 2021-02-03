@@ -36,16 +36,16 @@ const Product = (props) => {
             <Header lang={lang} />
             <div className='wrap__product'>
                 <div className="product-content">
-                    <div className="product-banner">
+                    <div className="product-banner animate__animated animate__fadeInDown" >
                         <div className="banner-content">
                             <div className='banner-content-title'> {translations[lang].product}</div>
                             <div className='banner-content-info'>{translations[lang].product_description}</div>
                         </div>
-                        <img src="/images/Product1@2x.png" className="banner-image" />
+                        <img src="/images/original/model.png" className="banner-image" />
                     </div>
                     <div className='product-slider__content'>
                         <Row className={'slider'} gutter={[20, 20]}>
-                            <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ position: 'relative' }}>
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} style={{ position: 'relative' }} className='animate__animated animate__backInLeft'>
                                 <img src="/images/product/product-1.png" width={'100%'} alt="" />
                                 <section className="message__box display-content">
                                     <div className="message__title">
@@ -55,7 +55,6 @@ const Product = (props) => {
                                         {translations[lang].nitrile_description}
                                     </div>
                                     <Link href={`/${lang}/product/nitrile-medical-gloves`}>
-
                                         <div className="message__button-more">
                                             {translations[lang].More}
                                             <i className="icon-out-angle-right"></i>
@@ -64,7 +63,7 @@ const Product = (props) => {
 
                                 </section>
                             </Col>
-                            <Col xs={{ span: 24 }} md={{ span: 12 }}>
+                            <Col xs={{ span: 24 }} md={{ span: 12 }} className='animate__animated animate__backInRight'>
                                 <img src="/images/product/product-2.png" width={'100%'} alt="" />
                                 <section className="message__box display-content">
                                     <div className="message__title">
@@ -73,10 +72,12 @@ const Product = (props) => {
                                     <div className="message__description" style={{ marginBottom: 20 }}>
                                         {translations[lang].latex_description}
                                     </div>
-                                    <div className="message__button-more">
-                                        {translations[lang].More}
-                                        <i className="icon-out-angle-right"></i>
-                                    </div>
+                                    <Link href={`/${lang}/product/latex-medical-gloves`}>
+                                        <div className="message__button-more">
+                                            {translations[lang].More}
+                                            <i className="icon-out-angle-right"></i>
+                                        </div>  
+                                    </Link>
                                 </section>
                             </Col>
                         </Row>

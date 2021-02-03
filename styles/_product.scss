@@ -89,7 +89,7 @@
   }
 
   .product-content {
-    padding: 70px 0px 20px 0px;
+    padding: 100px 0px 20px 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -132,6 +132,7 @@
       }
       .banner-image {
         position: absolute;
+        width: 230px;
         right: 10px;
         bottom: 0px;
       }
@@ -209,7 +210,7 @@
   }
 
   .banner-content {
-    width: 200px !important;
+    width: 210px !important;
   }
 
   .product-slider__content {
@@ -248,8 +249,12 @@
     font-size: 10px !important;
   }
 
+  .display-content {
+    padding: 0px 0px !important;
+  }
+
   .product-banner {
     width: 100% !important;
-    height: max-content !important;
+    // height: max-content !important;
   }
 }

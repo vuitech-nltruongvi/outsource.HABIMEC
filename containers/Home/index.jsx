@@ -37,7 +37,7 @@ export default function Home(props) {
 
     const banner = {
         vi: [
-            { key: '1', desktop: '/images/original/banner/desktop/banner-1.png', mobile: '/images/original/banner/mobile/banner-1.jpg' },
+            { key: '1', desktop: '/images/original/banner/desktop/banner-1.jpg', mobile: '/images/original/banner/mobile/banner-1.jpg' },
             { key: '2', desktop: '/images/original/banner/desktop/banner-2.png', mobile: '/images/original/banner/mobile/banner-2.jpg' },
             { key: '3', desktop: '/images/original/banner/desktop/banner-3.png', mobile: '/images/original/banner/mobile/banner-3.jpg' },
         ],
@@ -160,8 +160,7 @@ export default function Home(props) {
                                         <li className='content__item'>
                                             {translations[lang]['Total factory area']}
                                             <div>
-                                                <span className="item--bold">220,000m<sup>2</sup></span> &nbsp;
-										<span className='item--bold grey'>= 22ha</span> &nbsp;
+                                                <span className="item--bold">390,000m<sup>2</sup> = 39ha</span> &nbsp;
 										<span className='fs-14'>{translations[lang]['(hight 16m - 19m)']}</span>
                                             </div>
                                         </li>
