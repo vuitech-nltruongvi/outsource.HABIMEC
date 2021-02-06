@@ -124,12 +124,10 @@ export const pathProductDetails = [
         title: 'latex_title',
         image: '/images/original/product/Banner 1-10.png',
         listImage: [
-            '/images/original/product/gang tay habimec-08.jpg',
-            '/images/original/product/gang tay habimec-09.jpg',
-            '/images/original/product/gang tay habimec-10.jpg',
-            '/images/original/product/gang tay habimec-11.jpg',
-            '/images/original/product/gang tay habimec-12.jpg',
-
+            '/images/original/product/latex-01.jpg',
+            '/images/original/product/latex-02.jpg',
+            '/images/original/product/latex-03.jpg',
+            '/images/original/product/latex-04.jpg',
         ]
     },
 ]

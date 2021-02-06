@@ -21,6 +21,18 @@
         font-size: 24px !important;
     }
 
+    .wrap-video {
+        margin-top: 60px;
+        background-color: #fff;
+        border: 5px solid #fff;
+        border-radius: 5px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+        height: 400px; 
+    }
+
     .wrap__introduce {
         background-image: url(../public/images/about-us/aboutus-2.png);
         background-position: center;
@@ -214,8 +226,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
+        flex-direction: column;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        // justify-content: center;
         // padding: 5rem;
         font-weight: 500;
 
@@ -369,6 +383,11 @@
     }
 
     .wrap__content {
+
+        .wrap-video {
+            width: 100% !important;
+            height: 300px !important; 
+        }
 
         .certificate__button {
             font-size: 14px !important;

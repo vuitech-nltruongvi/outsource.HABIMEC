@@ -20,7 +20,7 @@ export default function Home(props) {
         dots: true,
         infinite: true,
         speed: 1000,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 4000,
         cssEase: "linear",
         pauseOnHover: false,
@@ -40,11 +40,17 @@ export default function Home(props) {
             { key: '1', desktop: '/images/original/banner/desktop/banner-1.jpg', mobile: '/images/original/banner/mobile/banner-1.jpg' },
             { key: '2', desktop: '/images/original/banner/desktop/banner-2.png', mobile: '/images/original/banner/mobile/banner-2.jpg' },
             { key: '3', desktop: '/images/original/banner/desktop/banner-3.png', mobile: '/images/original/banner/mobile/banner-3.jpg' },
+            { key: '4', desktop: '/images/original/banner/desktop/banner-4.jpg', mobile: '/images/original/banner/desktop/banner-4.jpg' },
+            { key: '5', desktop: '/images/original/banner/desktop/banner-5.jpg', mobile: '/images/original/banner/desktop/banner-5.jpg' },
+            { key: '6', desktop: '/images/original/banner/desktop/banner-6.jpg', mobile: '/images/original/banner/desktop/banner-6.jpg' },
         ],
         en: [
             { key: '4', desktop: '/images/original/banner/desktop/banner-english-1.jpg', mobile: '/images/original/banner/mobile/banner-english-1.jpg' },
             { key: '5', desktop: '/images/original/banner/desktop/banner-english-2.jpg', mobile: '/images/original/banner/mobile/banner-english-2.jpg' },
             { key: '6', desktop: '/images/original/banner/desktop/banner-english-3.jpg', mobile: '/images/original/banner/mobile/banner-english-3.jpg' },
+            // { key: '7', desktop: '/images/original/banner/desktop/banner-4.jpg', mobile: '/images/original/banner/desktop/banner-4.jpg' },
+            // { key: '8', desktop: '/images/original/banner/desktop/banner-5.jpg', mobile: '/images/original/banner/desktop/banner-5.jpg' },
+            // { key: '9', desktop: '/images/original/banner/desktop/banner-6.jpg', mobile: '/images/original/banner/desktop/banner-6.jpg' },
         ]
     }
 

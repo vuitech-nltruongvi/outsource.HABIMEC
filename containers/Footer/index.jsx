@@ -69,9 +69,9 @@ const Footer = (props) => {
         <footer className="home__contact">
             <div className="box__button">
                 <Link href={`/${lang}/contact`}>
-                <div className="button__round animate__slow animate__animated animate__heartBeat animate__infinite">
-                    <i className="icon-out-contact"></i>
-                </div>
+                    <div className="button__round animate__slow animate__animated animate__heartBeat animate__infinite">
+                        <i className="icon-out-contact"></i>
+                    </div>
                 </Link>
                 <div className="button__round" style={{ display: isShowBackTop ? 'flex' : 'none' }} onClick={onClickBackToTop}>
                     <i className="icon-out-caret"></i>
@@ -176,8 +176,12 @@ const Footer = (props) => {
                         </Col>
                         <Col xs={{ span: 24 }} md={{ span: 8 }}>
                             <div className="group__icon--you-face">
-                                <i className='icon-facebook mr-10'></i>
-                                <i className='icon-youtube'></i>
+                                <a>
+                                    <i className='icon-facebook mr-10'></i>
+                                </a>
+                                <a href='https://www.youtube.com/watch?fbclid=IwAR2LArKDc6W8QvaahVLMSFbPPDNXxS-Fl03Q9iM25C50pr-JIXxOE8fJA3M&v=aza-q-Y3mtw&feature=youtu.be' target='_blank'>
+                                    <i className='icon-youtube'></i>
+                                </a>
                             </div>
                         </Col>
                     </Row>

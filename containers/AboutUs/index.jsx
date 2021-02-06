@@ -223,6 +223,11 @@ const AboutUs = (props) => {
                     >
                     </Parallax>
                     <section className="wrap__slugion">
+                        <div className='d-flex a-c'>
+                            <div className='wrap-video' data-aos="fade-right">
+                                <iframe width="100%" height='100%' src="https://www.youtube.com/embed/WKW028PWR2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
                         <div className='more-info z-50 no-background'>
                             <div className="more-info__right-content slugion__content" data-aos="zoom-in-up">
                                 <span className='right-content__title'>
