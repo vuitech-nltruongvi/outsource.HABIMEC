@@ -6,7 +6,6 @@
     "dev": "node server.js",
     "export": "next build && next export",
     "build": "next build",
-    "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {

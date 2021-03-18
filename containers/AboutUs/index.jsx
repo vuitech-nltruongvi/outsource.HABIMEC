@@ -34,7 +34,8 @@ const AboutUs = (props) => {
         { key: 'image-7', path: '/images/original/company/ha nha may-07.jpg' },
         { key: 'image-8', path: '/images/original/company/ha nha may-08.png' },
         { key: 'image-9', path: '/images/original/company/ha nha may-09.png' },
-        { key: 'image-11', path: '/images/original/company/ha nha may-11.jpg' }
+        { key: 'image-11', path: '/images/original/company/ha nha may-11.jpg' },
+        { key: 'image-12', path: '/images/original/company/ha nha may-12.jpg' }
     ]
 
     const banner = {

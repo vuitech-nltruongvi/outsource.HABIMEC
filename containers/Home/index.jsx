@@ -20,7 +20,7 @@ export default function Home(props) {
         dots: true,
         infinite: true,
         speed: 1000,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 4000,
         cssEase: "linear",
         pauseOnHover: false,
@@ -42,14 +42,13 @@ export default function Home(props) {
             { key: '3', desktop: '/images/original/banner/desktop/banner-3.png', mobile: '/images/original/banner/mobile/banner-3.jpg' },
             { key: '4', desktop: '/images/original/banner/desktop/banner-4.jpg', mobile: '/images/original/banner/desktop/banner-4.jpg' },
             { key: '5', desktop: '/images/original/banner/desktop/banner-5.jpg', mobile: '/images/original/banner/desktop/banner-5.jpg' },
-            { key: '6', desktop: '/images/original/banner/desktop/banner-6.jpg', mobile: '/images/original/banner/desktop/banner-6.jpg' },
         ],
         en: [
             { key: '4', desktop: '/images/original/banner/desktop/banner-english-1.jpg', mobile: '/images/original/banner/mobile/banner-english-1.jpg' },
             { key: '5', desktop: '/images/original/banner/desktop/banner-english-2.jpg', mobile: '/images/original/banner/mobile/banner-english-2.jpg' },
             { key: '6', desktop: '/images/original/banner/desktop/banner-english-3.jpg', mobile: '/images/original/banner/mobile/banner-english-3.jpg' },
-            // { key: '7', desktop: '/images/original/banner/desktop/banner-4.jpg', mobile: '/images/original/banner/desktop/banner-4.jpg' },
-            // { key: '8', desktop: '/images/original/banner/desktop/banner-5.jpg', mobile: '/images/original/banner/desktop/banner-5.jpg' },
+            { key: '7', desktop: '/images/original/banner/desktop/banner-4.jpg', mobile: '/images/original/banner/desktop/banner-4.jpg' },
+            { key: '8', desktop: '/images/original/banner/desktop/banner-5.jpg', mobile: '/images/original/banner/desktop/banner-5.jpg' },
             // { key: '9', desktop: '/images/original/banner/desktop/banner-6.jpg', mobile: '/images/original/banner/desktop/banner-6.jpg' },
         ]
     }
@@ -68,7 +67,7 @@ export default function Home(props) {
                 <Header lang={props.lang} />
                 <Slider {...settings} className='carousel__bar'>
                     {banner[lang].map(itemBanner => (
-                        <div key={itemBanner.key}>
+                        <div key={itemBanner.key} className='wrap-image-slider'>
                             <img src={itemBanner.desktop} className='responsive__image image-desktop' alt="" />
                             <img src={itemBanner.mobile} className='responsive__image image-mobile' alt="" />
                         </div>
